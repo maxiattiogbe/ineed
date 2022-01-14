@@ -25,6 +25,6 @@
     border-color: transparent;
   }
   50% {
-    border-color: var(--primary);
+    border-color: var(--primary--dim);
   }
 }
