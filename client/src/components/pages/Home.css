@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--off_white);
   color: var(--white);
   font-family: "Open Sans", sans-serif;
 }

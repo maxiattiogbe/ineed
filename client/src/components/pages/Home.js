@@ -25,10 +25,7 @@ const Home = ({ userId, handleLogin, handleLogout }) => {
           onFailure={(err) => console.log(err)}
         />
       )}
-      <div>
-          <img src="../../../favicon.png"/>
-          <h1>ineed</h1>
-      </div>
+      <h1>Home</h1>
     </>
   );
 };

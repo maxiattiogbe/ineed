@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import NotFound from "./pages/NotFound.js";
 import Home from "./pages/Home.js";
+import NavBar from "./modules/NavBar.js"
+import Feed from "./pages/Feed.js";
+import NewPost from "./pages/NewPost.js";
 
 import "../utilities.css";
 
@@ -40,10 +43,15 @@ const App = () => {
 
   return (
     <>
-      <Router>
-        <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-        <NotFound default />
-      </Router>
+      <NavBar/>
+      <div className="App-container">
+        <Router>
+          <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+          <Feed path="/feed" />
+          <NewPost path="/new-post" />
+          <NotFound default />
+        </Router>
+      </div>
     </>
   );
 };
