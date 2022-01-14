@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
      <br></br>
-     <div className="body-title-2 u-inlineBlock u-textCenter">Get what you need by connecting on ineed.</div>
+     <div className="body-title-2 u-inlineBlock u-textCenter">The social way to get what you need.</div>
      <br></br>
      <br></br>
       <div className="body-title-1 u-textCenter">
