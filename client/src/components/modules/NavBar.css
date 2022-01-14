@@ -1,0 +1,38 @@
+.NavBar-container {
+  padding: var(--s) var(--m);
+  background-color: var(--black);
+}
+
+.NavBar-title-part1 {
+  color: var(--white);
+  font-size: 50px;
+}
+
+.NavBar-title-part2 {
+  color: var(--primary);
+  font-size: 50px;
+}
+
+.NavBar-linkContainer {
+  margin-left: var(--l);
+  background-color: var(--black);
+}
+
+.NavBar-link,
+.NavBar-link:visited {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.NavBar-link:hover {
+  color: var(--primary--dim);
+}
+
+.NavBar-link + .NavBar-link {
+  margin-left: var(--m);
+}
+
+.NavBar-logo-image {
+  width: 4%;
+}

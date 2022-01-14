@@ -18,8 +18,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 
 :root {
-  --bronze: #d57f39;
-  --teal: #007991;
+  --primary: #d57f39;
+  --primary--dim: #eacc58;
+  --secondary: #007991;
+  --secondary--dim: #2daee1;
   --black: #000000;
   --very_dark_gray: #111010;
   --dark_gray: #292a2a;
@@ -41,6 +43,18 @@ body {
   color: var(--black);
 }
 
+.body-title-1 {
+  color: var(--black);
+  font-size: 40px;
+  width: 100%;
+}
+
+.body-title-2 {
+  color: var(--primary);
+  font-size: 40px;
+  width: 100%;
+}
+
 form {
   flex-grow: 1;
 }
@@ -60,6 +74,10 @@ form {
 
 .u-flex-alignCenter {
   align-items: center;
+}
+
+.u-flex-alignRight {
+  align-items: right;
 }
 
 .u-inlineBlock {

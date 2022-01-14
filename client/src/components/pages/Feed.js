@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import "../../utilities.css";
 
 const Feed = () => {
     return (
-        <h1>Feed</h1>
+        <>
+        <br></br>
+        <div className="body-title-2 u-textCenter">Feed</div>
+        </>
     );
 }
 

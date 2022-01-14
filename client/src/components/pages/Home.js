@@ -1,31 +1,31 @@
 import React, { Component } from "react";
-import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 import "../../utilities.css";
 import "./Home.css";
 
-
-const GOOGLE_CLIENT_ID = "942346034916-8oq8cetdofgeupecljks6lgmgabq083l.apps.googleusercontent.com";
-
-const Home = ({ userId, handleLogin, handleLogout }) => {
+const Home = () => {
   return (
     <>
-      {userId ? (
-        <GoogleLogout
-          clientId={GOOGLE_CLIENT_ID}
-          buttonText="Logout"
-          onLogoutSuccess={handleLogout}
-          onFailure={(err) => console.log(err)}
-        />
-      ) : (
-        <GoogleLogin
-          clientId={GOOGLE_CLIENT_ID}
-          buttonText="Login"
-          onSuccess={handleLogin}
-          onFailure={(err) => console.log(err)}
-        />
-      )}
-      <h1>Home</h1>
+     <br></br>
+     <div className="body-title-2 u-inlineBlock u-textCenter">Get what you need by connecting on ineed.</div>
+     <br></br>
+     <br></br>
+      <div className="body-title-1 u-textCenter">
+        <img src="../../../two-friends-meeting-in-cafe.jpeg"/>
+      </div> 
+     <br></br>
+      <div className="body-title-1 u-textCenter typewriter">
+        I need lined paper and black pens.
+      </div>
+      <br></br>
+      <div className="body-title-1 u-textCenter typewriter">
+        I need a reusable water bottle.
+      </div>
+      <br></br>
+      <div className="body-title-1 u-textCenter typewriter">
+        I need a 10 ft extension cord.
+      </div>
+      <br></br>
     </>
   );
 };

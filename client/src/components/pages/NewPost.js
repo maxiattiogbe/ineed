@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import "../../utilities.css";
 
 const NewPost = () => {
     return (
-        <h1>New Post</h1>
+        <>
+        <br></br>
+        <div className="body-title-2 u-textCenter">New Post</div>
+        </> 
     );
 }
 
