@@ -15,15 +15,16 @@
 */
 
 /* TODO: REPLACE WITH YOUR OWN FONT! */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 
 :root {
-  --primary: #396dff;
-  --primary--dim: #6987db;
-  --darkgrey: #d4d4d4;
-  --medgrey: #e0e0e0;
-  --grey: #f7f7f7;
-  --white: #fff;
+  --bronze: #d57f39;
+  --teal: #007991;
+  --black: #000000;
+  --very_dark_gray: #111010;
+  --dark_gray: #292a2a;
+  --off_white: #ededed;
+  --white: #ffffff;
 
   --xs: 4px;
   --s: 8px;
@@ -34,8 +35,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  background-color: var(--off_white);
+  color: var(--black);
 }
 
 form {
