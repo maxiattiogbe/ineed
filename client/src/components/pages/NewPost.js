@@ -3,8 +3,7 @@ import "../../utilities.css";
 import "./NewPost.css";
 import { post } from "../../utilities.js";
 
-const NewPost = () => {
-    const [currentName, setCurrentName] = useState("");
+const NewPost = (props) => {
     const [currentINeed, setCurrentINeed] = useState("");
     const [currentIOffer, setCurrentIOffer] = useState("");
     const [currentOther, setCurrentOther] = useState("");
@@ -13,10 +12,6 @@ const NewPost = () => {
         <div className="OuterClass">
         <div className="body-title-2 u-textCenter">New Post</div>
         <div className="MiddleClass">
-        <label className="LabelClass">
-            <div className="InsideClass NameTextClass">Name:</div>
-            <input type="text" className="InsideClass NameClass" value={currentName} onChange={event => setCurrentName(event.target.value)} />
-        </label>
         <label className="LabelClass">
             <div className="InsideClass INeedTextClass">I need:</div>
             <textarea type="text" className="InsideClass INeedClass" value={currentINeed} onChange={event => setCurrentINeed(event.target.value)} />
@@ -33,7 +28,7 @@ const NewPost = () => {
             () => 
             {
                 //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
-                post("/api/addNewPost", {name:currentName, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther});
+                post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther});
             }
         }>
             Submit!

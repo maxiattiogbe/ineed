@@ -18,12 +18,14 @@ import { get, post } from "../utilities";
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
+  const [userName, setUserName] = useState(undefined);
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
+        setUserName(user.name);
       }
     });
   }, []);
@@ -33,12 +35,14 @@ const App = () => {
     const userToken = res.tokenObj.id_token;
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
+      setUserName(user.name);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
 
   const handleLogout = () => {
     setUserId(undefined);
+    setUserName(undefined);
     post("/api/logout");
   };
 
@@ -51,7 +55,7 @@ const App = () => {
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
           <Profile path="/profile" />
           <Feed path="/feed" />
-          <NewPost path="/new-post" />
+          <NewPost path="/new-post" name={userName}/>
           <NotFound default />
         </Router>
       </div>
