@@ -53,7 +53,7 @@ const App = () => {
         <Router>
           <Home path="/" />
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-          <Profile path="/profile" />
+          <Profile path="/profile" name={userName} />
           <Feed path="/feed" />
           <NewPost path="/new-post" name={userName}/>
           <NotFound default />
