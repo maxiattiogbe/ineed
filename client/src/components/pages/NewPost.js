@@ -7,7 +7,10 @@ const NewPost = (props) => {
     const [currentINeed, setCurrentINeed] = useState("");
     const [currentIOffer, setCurrentIOffer] = useState("");
     const [currentOther, setCurrentOther] = useState("");
+    const currentdate = new Date().toLocaleTimeString();
+    const todayDate = new Date().toLocaleDateString();
 
+let datetime = todayDate + " @ " + currentdate;
     return (
         <div className="OuterClass">
         <div className="body-title-2 u-textCenter">New Post</div>
@@ -28,7 +31,7 @@ const NewPost = (props) => {
             () => 
             {
                 //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
-                post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther});
+                post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
             }
         }>
             Submit!

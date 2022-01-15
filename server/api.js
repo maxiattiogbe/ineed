@@ -57,7 +57,8 @@ router.post("/addNewPost", (req, res) => {
     name: req.body.name,
     iNeed: req.body.iNeed,
     iOffer: req.body.iOffer,
-    other: req.body.other
+    other: req.body.other,
+    datetime: req.body.datetime
   });
 
   newPost.save().then((story) => res.send(story));

@@ -44,6 +44,7 @@ const Feed = () => {
             ineed={postObj.iNeed} 
             offer={postObj.iOffer} 
             other={postObj.other}
+            datetime = {postObj.datetime}
 
             />
         );

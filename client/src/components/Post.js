@@ -2,7 +2,7 @@ import {get} from "../utilities.js";
 import React, { Component } from "react";
 import "../utilities.css";
 
-const Post = ({name,ineed,offer,other}) => {
+const Post = ({name,ineed,offer,other,datetime}) => {
     return (
       
         <div className="boxed">
@@ -18,7 +18,8 @@ const Post = ({name,ineed,offer,other}) => {
         <div className = "other" >Other</div>
         <div className = "postInfoOther">{other}</div>
         <br></br>
-          </div>
+        <div class = "time">{datetime}</div>
+        </div>
 
     );
   };

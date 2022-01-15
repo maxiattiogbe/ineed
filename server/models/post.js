@@ -4,7 +4,8 @@ const PostSchema = new mongoose.Schema({
     name: String,
     iNeed: String,
     iOffer: String,
-    other: String
+    other: String,
+    datetime: String
 });
 
 module.exports = mongoose.model("post", PostSchema);
