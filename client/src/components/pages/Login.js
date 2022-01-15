@@ -23,7 +23,7 @@ const Login = ({ userId, handleLogin, handleLogout }) => {
         ) : (
             <GoogleLogin
             clientId={GOOGLE_CLIENT_ID}
-            buttonText="Login"
+            buttonText="Login with Google"
             onSuccess={handleLogin}
             onFailure={(err) => console.log(err)}
             />
