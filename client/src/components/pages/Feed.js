@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../utilities.css";
-import "./Feed.css"
-
+import "./Feed.css";
+import {get} from "../../utilities.js";
 const Feed = () => {
     return (
         <>

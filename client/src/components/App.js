@@ -6,7 +6,7 @@ import Login from "./pages/Login.js";
 import NavBar from "./modules/NavBar.js"
 import Feed from "./pages/Feed.js";
 import NewPost from "./pages/NewPost.js";
-
+import Profile from "./pages/Profile.js";
 import "../utilities.css";
 
 import { socket } from "../client-socket.js";
@@ -49,6 +49,7 @@ const App = () => {
         <Router>
           <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+          <Profile path="/profile" />
           <Feed path="/feed" />
           <NewPost path="/new-post" />
           <NotFound default />

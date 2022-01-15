@@ -54,6 +54,11 @@ router.post("/addNewPost", (req, res) => {
   newPost.save();
 });
 
+router.get("/receivePosts",(req,res) => {
+  Post.find({}).then(posts => res.send(posts)); 
+
+});
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);
