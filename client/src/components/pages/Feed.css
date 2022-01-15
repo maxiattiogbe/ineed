@@ -28,8 +28,22 @@
     color:black;
 }
 
-.postInfo{
-    border:1px solid black;
+.postInfoNeed{
+    border:1px solid orange;
+    color: gray;
+    
+
+}
+
+.postInfoOffer{
+    border:1px solid green;
+    color: gray;
+    
+
+}
+
+.postInfoOther{
+    border:1px solid gray;
     color: gray;
     
 
