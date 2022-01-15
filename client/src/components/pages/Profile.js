@@ -15,7 +15,7 @@ const Profile = () => {
     <div className = "flex-container">
     
     <div className= "flex-child">
-    <div classname = "aboutprofile">
+    <div className = "aboutprofile">
     <div className="boxedprofile">
        <div className = "profilename"> About</div> 
        <br></br>

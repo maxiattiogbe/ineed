@@ -1,6 +1,6 @@
-import {get} from "../../utilities.js";
+import {get} from "../utilities.js";
 import React, { Component } from "react";
-import "../../utilities.css";
+import "../utilities.css";
 
 const Post = ({name,ineed,offer,other}) => {
     return (
@@ -10,13 +10,13 @@ const Post = ({name,ineed,offer,other}) => {
        <div className = "name">{name}</div> 
        <br></br>
         <div className = "ineed">I Need</div> 
-        <div className = "postInfo">{ineed}</div>
+        <div className = "postInfoNeed">{ineed}</div>
         <br></br>
         <div className = "ioffer">I offer</div>
-        <div className = "postInfo">{offer}</div>
+        <div className = "postInfoOffer">{offer}</div>
         <br></br>
         <div classname = "other">Other</div>
-        <div className = "postInfo">{other}</div>
+        <div className = "postInfoOther">{other}</div>
         <br></br>
           </div>
 

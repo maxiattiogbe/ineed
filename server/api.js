@@ -42,6 +42,12 @@ router.post("/initsocket", (req, res) => {
 // |------------------------------|
 // | write your API methods below!|
 // |------------------------------|
+router.get("/receivePosts",(req,res) => {
+  Post.find({}).then((posts) => {
+    res.send(posts);
+    console.log("We did it!");
+  });
+});
 
 router.post("/addNewPost", (req, res) => {
   const newPost = new Post({
@@ -51,13 +57,10 @@ router.post("/addNewPost", (req, res) => {
     other: req.body.other
   });
 
-  newPost.save();
+  newPost.save().then((story) => res.send(story));
 });
 
-router.get("/receivePosts",(req,res) => {
-  Post.find({}).then(posts => res.send(posts)); 
 
-});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
