@@ -47,12 +47,11 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
               />
           )}
         </div>
-        {userId || (
+        {!userId && (
           <Link to={`/login/`} className="NavBar-link">
             Login
           </Link>
         )}
-
       </div>
     </nav>
   );
