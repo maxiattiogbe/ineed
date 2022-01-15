@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React, { Component, useState } from "react";
+import Modal from "react-modal";
 
 import "../../utilities.css";
 import "./Profile.css";
@@ -7,24 +7,55 @@ import "./Feed";
 
 
 const Profile = (props) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-    
-    <br></br>
     <div className="body-title-2 u-textCenter">Profile</div>
     <div className = "flex-container">
-    
     <div className= "flex-child">
-    <div className = "aboutprofile">
+    <div className="aboutprofile">
     <div className="boxedprofile">
-       <div className = "profilename"> About</div> 
-       <br></br>
-       <div className = "profileinfo">College</div>
-        <div className = "profileinfotext"> </div> 
-        <br></br>
-        <div className = "profileinfo">About</div>
-        <div className = "profileinfotext"> </div>
-        <br></br>
+      <div className="profilename">About</div>
+      <div className="profileinfo">College</div>
+      <div className="profileinfotext"></div>
+      <div className="profileinfo">About</div>
+      <div className="profileinfotext"></div>
+      <div
+        className = "editButton"
+        onClick = {
+          () => {
+            setOpen(!open);
+          }
+        }>
+        Edit
+      </div>
+      <Modal isOpen={open}>
+        <div>Edit My Profile</div>
+        <div>College</div>
+        <input id="CollegeInputNode" className="CollegeInput"></input>
+        <div>About</div>
+        <textarea id="AboutTextAreaNode" className="AboutTextArea"></textarea>
+        <div
+          className = "saveButton"
+          onClick = {
+            () => {
+              setOpen(!open);
+              console.log();
+            }
+          }>
+          Save
+        </div>
+        <div
+          className = "cancelButton"
+          onClick = {
+            () => {
+              setOpen(!open);
+            }
+          }>
+          Cancel
+        </div>
+      </Modal>
     </div>
     </div>
     </div>
@@ -43,7 +74,6 @@ const Profile = (props) => {
     </div>
     </div>
     </div>
-    
     </>
   );
 };
