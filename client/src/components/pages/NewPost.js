@@ -10,25 +10,24 @@ const NewPost = () => {
     const [currentOther, setCurrentOther] = useState("");
 
     return (
-        <>
-        <br></br>
+        <div className="OuterClass">
         <div className="body-title-2 u-textCenter">New Post</div>
-        <div>
+        <div className="MiddleClass">
         <label className="LabelClass">
-            <div className="InsideClass">Name:</div>
+            <div className="InsideClass NameTextClass">Name:</div>
             <input type="text" className="InsideClass NameClass" value={currentName} onChange={event => setCurrentName(event.target.value)} />
         </label>
         <label className="LabelClass">
             <div className="InsideClass INeedTextClass">I need:</div>
-            <input type="text" className="InsideClass INeedClass" value={currentINeed} onChange={event => setCurrentINeed(event.target.value)} />
+            <textarea type="text" className="InsideClass INeedClass" value={currentINeed} onChange={event => setCurrentINeed(event.target.value)} />
         </label>
         <label className="LabelClass">
-            <div className="InsideClass IWantTextClass">I offer:</div>
-            <input type="text" className="InsideClass IWantClass" value={currentIOffer} onChange={event => setCurrentIOffer(event.target.value)} />
+            <div className="InsideClass IOfferTextClass">I offer:</div>
+            <textarea type="text" className="InsideClass IOfferClass" value={currentIOffer} onChange={event => setCurrentIOffer(event.target.value)} />
         </label>
         <label className="LabelClass">
             <div className="InsideClass">Other:</div>
-            <input type="text" className="InsideClass OtherClass" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
+            <textarea type="text" className="InsideClass OtherClass" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
         </label>
         <div className="SubmitClass" value="Submit" onClick={
             () => 
@@ -40,7 +39,7 @@ const NewPost = () => {
             Submit!
         </div>
         </div>
-        </>
+        </div>
     );
 }
 

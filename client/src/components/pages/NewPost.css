@@ -1,3 +1,13 @@
+.OuterClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MiddleClass {
+    width:50%;
+}
+
 .LabelClass {
     display: flex;
     flex-direction: column;
@@ -7,8 +17,12 @@
 
 }
 
+.NameTextClass {
+
+}
+
 .NameClass {
-    width: 10%;
+    width: 25%;
     border: none;
 }
 
@@ -17,26 +31,27 @@
 }
 
 .INeedClass {
-    width: 20%;
+    width: 50%;
     border: none;
 }
 
-.IWantTextClass {
+.IOfferTextClass {
     color: orange;
 }
 
-.IWantClass {
-    width: 20%;
+.IOfferClass {
+    width: 50%;
     border: none;
 }
 
 .OtherClass {
-    width: 20%;
+    width: 50%;
     border: none;
 }
 
 .SubmitClass {
-    width: 10%;
+    text-align: center;
+    width: 20%;
     border: none;
     background-color: orange;
 }
