@@ -6,13 +6,25 @@ import "./Home.css";
 const Home = () => {
   return (
     <>
+      {/* <div className="u-textCenter">
+          <img src="../../../two-friends-meeting-in-cafe.jpeg"/>
+      </div>  */}
+     <div className="Home-body-title-1 u-inlineBlock u-textCenter Home-img" height="60%">
+       <br></br>
+       <br></br>
+       <br></br>
+       <br>Home</br>
+       The social way to get
+       <br></br>
+       what you need.
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+      </div>
+
      <br></br>
-     <div className="body-title-2 u-inlineBlock u-textCenter">The social way to get what you need.</div>
-     <br></br>
-     <br></br>
-      <div className="body-title-1 u-textCenter">
-        <img src="../../../two-friends-meeting-in-cafe.jpeg"/>
-      </div> 
      <br></br>
       <div className="body-title-1 u-textCenter typewriter">
         I need lined paper and black pens.
