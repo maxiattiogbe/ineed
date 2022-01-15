@@ -9,22 +9,41 @@ import "./Feed";
 const Profile = () => {
   return (
     <>
+    
     <br></br>
     <div className="body-title-2 u-textCenter">Profile</div>
-    <div className="boxed">
-    <div classname = "bannerpage">
+    <div className = "flex-container">
+    
+    <div className= "flex-child">
+    <div classname = "aboutprofile">
+    <div className="boxedprofile">
+       <div className = "profilename"> About</div> 
+       <br></br>
+       <div className = "profileinfo">College</div>
+        <div className = "profileinfotext"> </div> 
+        <br></br>
+        <div className = "profileinfo">About</div>
+        <div className = "profileinfotext"> </div>
+        <br></br>
+    </div>
+    </div>
+    </div>
+
+    <div className = "flex-child--featured">
+    <div className="boxedprofile">
         < img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic" ></img>
        <div className = "profilename"> Name</div> 
-       </div>
        <br></br>
        <div className = "ineedtitle">ineed</div>
         <div className = "ineedposts"> </div> 
         <br></br>
-        <div className = "ineedtitle">iwant</div>
+        <div className = "iwanttitle">iwant</div>
         <div className = "ineedposts"> </div>
         <br></br>
-        
     </div>
+    </div>
+    </div>
+    
     </>
   );
 };

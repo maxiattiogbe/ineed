@@ -5,6 +5,7 @@ import {get} from "../../utilities.js";
 const Feed = () => {
     return (
         <>
+       
         <br></br>
         <div className="body-title-2 u-textCenter">Feed</div>
         

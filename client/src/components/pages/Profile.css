@@ -1,16 +1,46 @@
-.profilename{
-    color:darkgray;
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 1px solid gray;
+}  
+
+.flex-child--featured {
+    flex:3;
+    border: 1px solid gray;
+} 
+
+.profileinfo{
+    color:gray;
+    
+}
+
+.profileinfotext{
+    padding:20px;
+    border: 1px solid gray;
+}
+.boxedprofile{
+    color: orange;
+    width:90%;
+    float:right;
+    padding:20px;
     
 
 }
-
-.bannerpage{
-    border: 1px solid grey;
+.profilename{
+    color:darkgray;
+   
 }
 
 .ineedposts{
     padding: 100px 100px 100px;
-    border: 1px solid grey;
+    border: 1px solid lightgray;
 
+}
+
+.iwanttitle{
+    color: Green;
 }
 
