@@ -44,10 +44,10 @@ const App = () => {
 
   return (
     <>
-      <NavBar/>
+      <NavBar handleLogin={handleLogin} handleLogout={handleLogout} userId={userId}/>
       <div className="App-container">
         <Router>
-          <Home path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+          <Home path="/" />
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
           <Feed path="/feed" />
           <NewPost path="/new-post" />
