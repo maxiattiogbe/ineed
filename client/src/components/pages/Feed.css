@@ -1,0 +1,37 @@
+.boxed {
+    border: 1px solid grey;
+    color: orange;
+    padding: 100px 100px 100px 100px;
+    width: 70%;
+    margin:auto;
+
+}
+.profilepic{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+}
+
+.name{
+    color:grey;
+}
+
+.ineed{
+    color:orange;
+}
+.ioffer{
+    color: green;
+}
+
+.other{
+    color:black;
+}
+
+.postInfo{
+    border:1px solid black;
+    color: gray;
+    
+
+}
+

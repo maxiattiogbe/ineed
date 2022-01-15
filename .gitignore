@@ -2,3 +2,5 @@ client/dist/bundle.js
 node_modules/
 .DS_Store
 .env
+ATLAS_SRV = "mongodb+srv://mna144:mongodb2022@cluster0.8vveo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+SESSION_SECRET = "session-secret"
