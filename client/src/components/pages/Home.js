@@ -13,7 +13,7 @@ const Home = () => {
        <br></br>
        <br></br>
        <br></br>
-       <br>Home</br>
+       <br></br>
        The social way to get
        <br></br>
        what you need.
