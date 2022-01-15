@@ -45,7 +45,10 @@ router.post("/initsocket", (req, res) => {
 router.get("/receivePosts",(req,res) => {
   Post.find({}).then((posts) => {
     res.send(posts);
+
+    /*
     console.log("We did it!");
+    */
   });
 });
 
