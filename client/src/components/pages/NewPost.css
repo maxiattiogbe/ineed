@@ -1,0 +1,42 @@
+.LabelClass {
+    display: flex;
+    flex-direction: column;
+}
+
+.InsideClass {
+
+}
+
+.NameClass {
+    width: 10%;
+    border: none;
+}
+
+.INeedTextClass {
+    color: green;
+}
+
+.INeedClass {
+    width: 20%;
+    border: none;
+}
+
+.IWantTextClass {
+    color: orange;
+}
+
+.IWantClass {
+    width: 20%;
+    border: none;
+}
+
+.OtherClass {
+    width: 20%;
+    border: none;
+}
+
+.SubmitClass {
+    width: 10%;
+    border: none;
+    background-color: orange;
+}
