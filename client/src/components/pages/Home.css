@@ -1,18 +1,19 @@
 .Home-body-title-1 {
   color: var(--black);
   font-size: 70px;
-  font-weight: 300;
+  font-weight: 400;
   width: 100%;
 }
 
 .Home-body-title-2 {
-  color: var(--black);
-  font-size: 40px;
+  color: var(--primary);
+  font-size: 70px;
+  font-weight: 400;
   width: 100%;
 }
 
 .Home-img {
-  background-image: url(/Users/maximattiogbe/Desktop/BBunch19-mna1024-21danielw/client/dist/two-friends-meeting-in-cafe.png);
+  background-image: url(https://images.pexels.com/photos/4827509/pexels-photo-4827509.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }

@@ -9,7 +9,7 @@ const Home = () => {
       {/* <div className="u-textCenter">
           <img src="../../../two-friends-meeting-in-cafe.jpeg"/>
       </div>  */}
-     <div className="Home-body-title-1 u-inlineBlock u-textCenter Home-img" height="60%">
+     <div className="Home-body-title-2 u-inlineBlock u-textCenter Home-img" height="60%">
        <br></br>
        <br></br>
        <br></br>
