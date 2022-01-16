@@ -42,5 +42,5 @@
 }
 
 .NavBar-link:active {
-  color: red;
+  color: var(--secondary--dim);
 }
