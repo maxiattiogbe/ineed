@@ -25,7 +25,7 @@ let datetime = todayDate + " @ " + currentdate;
         </label>
         <label className="LabelClass">
             <div className="InsideClass">Other:</div>
-            <textarea placeholder="enter other essiential info (time, place)" type="text" className="InsideClass OtherClass textbackground" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
+            <textarea placeholder="enter other essiential info (time,place)" type="text" className="InsideClass OtherClass textbackground" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
         </label>
         <button type="button" className="btn btn-warning" value="Submit" onClick={
             () => 

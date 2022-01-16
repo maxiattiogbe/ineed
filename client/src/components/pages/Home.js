@@ -27,15 +27,15 @@ const Home = () => {
      <br></br>
      <br></br>
       <div className="body-title-1 u-textCenter typewriter">
-        I need lined paper and black pens.
+        I need a 10 ft phone charger cable.
       </div>
       <br></br>
       <div className="body-title-1 u-textCenter typewriter">
-        I need a reusable water bottle.
+        I need someone good at drawing.
       </div>
       <br></br>
       <div className="body-title-1 u-textCenter typewriter">
-        I need a 10 ft extension cord.
+        I need help on the physics homework.
       </div>
       <br></br>
     </>

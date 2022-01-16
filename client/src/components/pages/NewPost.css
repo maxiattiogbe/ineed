@@ -1,62 +1,60 @@
-.textbackground{
-    background-color: rgb(241, 241, 241);
+.textbackground {
+  background-color: rgb(241, 241, 241);
 }
 .OuterClass {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .MiddleClass {
-    width:50%;
+  width: 50%;
 }
 
 .LabelClass {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .NameClass {
-    width: 25%;
-    border: none;
+  width: 25%;
+  border: none;
 }
 
 .INeedTextClass {
-    color: green;
+  color: orange;
 }
 
 .INeedClass {
-    width: 50%;
-    border: none;
-   
+  width: 50%;
+  border: none;
 }
 
 .IOfferTextClass {
-    color: orange;
+  color: var(--secondary);
 }
 
 .IOfferClass {
-    width: 50%;
-    border: none;
+  width: 50%;
+  border: none;
 }
 
 .OtherClass {
-    width: 50%;
-    border: none;
+  width: 50%;
+  border: none;
 }
 
 .SubmitClass {
-    text-align: center;
-    width: 20%;
-    border: none;
-    background-color: orange;
+  text-align: center;
+  width: 20%;
+  border: none;
+  background-color: orange;
 }
 
-textarea{
-    background-color:white;
+textarea {
+  background-color: white;
 }
 
-.btn-warning{
-    margin-top: 20px;
+.btn-warning {
+  margin-top: 20px;
 }
