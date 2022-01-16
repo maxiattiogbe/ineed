@@ -7,17 +7,22 @@ const GOOGLE_CLIENT_ID = "942346034916-b4mth5m9bhtvlnpuppa4djfu0olrdj0i.apps.goo
 
 const NavBar = ({ userId, handleLogin, handleLogout }) => {
   return (
+    <div className = "Bar">
     <nav className="NavBar-container">
       <img className="NavBar-logo-image" src="../../../favicon.png"/>
       <div className="NavBar-title-part1 u-inlineBlock">i</div>
       <div className="NavBar-title-part2 u-inlineBlock">need</div>
       <div className="NavBar-linkContainer u-inlineBlock">
+        
         <Link to="/" className="NavBar-link">
           Home
         </Link>
+        
         {userId && (
           <Link to={`/profile/`} className="NavBar-link">
+            {/* <div className = "profile"> */}
             Profile
+            {/* </div> */}
           </Link>
         )}
         {userId && (
@@ -54,6 +59,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
         )}
       </div>
     </nav>
+    </div>
   );
 }
 

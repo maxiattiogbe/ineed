@@ -1,3 +1,6 @@
+.textbackground{
+    background-color: rgb(241, 241, 241);
+}
 .OuterClass {
     display: flex;
     flex-direction: column;
@@ -26,6 +29,7 @@
 .INeedClass {
     width: 50%;
     border: none;
+   
 }
 
 .IOfferTextClass {
@@ -47,4 +51,12 @@
     width: 20%;
     border: none;
     background-color: orange;
+}
+
+textarea{
+    background-color:white;
+}
+
+.btn-warning{
+    margin-top: 20px;
 }

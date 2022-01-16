@@ -9,6 +9,7 @@ import "./Feed";
 const Profile = (props) => {
   const [open, setOpen] = useState(false);
 
+
   return (
     <>
     <div className="body-title-2 u-textCenter">Profile</div>

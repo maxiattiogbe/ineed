@@ -6,7 +6,6 @@ import Post from "../Post";
 
 const Feed = () => {
     const [posts, setPosts] = useState([]);
-
     useEffect(() => {
         get("/api/receivePosts").then((postObjs) => {
             /*
@@ -23,6 +22,7 @@ const Feed = () => {
             setPosts(reversedPostObjs);
         });
     }, []);
+
 
     /*
     console.log(posts);

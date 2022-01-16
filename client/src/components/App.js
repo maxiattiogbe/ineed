@@ -8,6 +8,7 @@ import Feed from "./pages/Feed.js";
 import NewPost from "./pages/NewPost.js";
 import Profile from "./pages/Profile.js";
 import "../utilities.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { socket } from "../client-socket.js";
 

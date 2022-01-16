@@ -1,9 +1,9 @@
 .boxed {
     border: 1px solid grey;
-    color: orange;
     padding: 100px 100px 100px 100px;
     width: 70%;
     margin:auto;
+    background-color: rgb(224, 220, 212);
 
 }
 .profilepic{
@@ -14,7 +14,8 @@
 }
 
 .name{
-    color:grey;
+    color:black;
+    font-weight: bold;
 }
 
 .ineed{
@@ -29,28 +30,31 @@
 }
 
 .postInfoNeed{
-    border:1px solid orange;
+    border:2px solid orange;
     color: gray;
+    padding-left: 5px;
+
     
 
 }
 
 .postInfoOffer{
-    border:1px solid green;
+    border:2px solid green;
     color: gray;
+    padding-left: 5px;
     
 
 }
 
 .postInfoOther{
-    border:1px solid gray;
+    border:2px solid gray;
     color: gray;
-    
+    padding-left: 5px;
 
 }
 
 .time{
     position: relative;
-    left: 75%;
-    
+    left: 65%;
+    color: gray;
 }
