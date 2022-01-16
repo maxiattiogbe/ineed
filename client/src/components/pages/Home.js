@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       <br></br>
       <div className="body-title-1 u-textCenter typewriter">
-        I need help on the physics homework.
+        I need help on physics homework.
       </div>
       <br></br>
     </>
