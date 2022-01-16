@@ -1,5 +1,6 @@
-.Bar{
-  position: sticky; top: 0
+.Bar {
+  position: sticky;
+  top: 0;
 }
 .NavBar-container {
   padding: var(--s) var(--m);
@@ -37,11 +38,9 @@
 }
 
 .NavBar-logo-image {
-  width: 4%;
+  width: 5%;
 }
- 
 
-.NavBar-link:active{
+.NavBar-link:active {
   color: red;
 }
-
