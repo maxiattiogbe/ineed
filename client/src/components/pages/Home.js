@@ -64,12 +64,24 @@ const Home = () => {
   };
   return (
     <>
-      <img src="https://images.pexels.com/photos/6146951/pexels-photo-6146951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" className="Home-img2" />
-      <div class="Home-overlay">
-        <div className="Home-body-title-4 u-inlineBlock u-textCenter">
-          The social way to get what you need.
+      {/* <img src="https://images.pexels.com/photos/6146951/pexels-photo-6146951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" className="Home-img2" /> */}
+      {/* <div className="Home-img">
+        <div class="Home-overlay">
+          <div className="Home-body-title-4 u-inlineBlock u-textCenter">
+            The social way to get what you need.
+          </div>
         </div>
-     </div>
+      </div> */}
+     
+      <div className="Home-img">
+        <div className="Home-body-title-4 u-inlineBlock u-textCenter">
+          <br></br>
+          <div className="Home-overlay">
+            The social way to get what you need.
+          </div>
+          <br></br>
+        </div>
+      </div>
 
      <section className="Home-section"> 
         <h1 className="u-textCenter">Need something? We got you.</h1>

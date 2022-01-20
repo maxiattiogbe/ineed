@@ -50,7 +50,7 @@
 .Home-img {
   background-image: url(https://images.pexels.com/photos/6146951/pexels-photo-6146951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% auto;
 }
 
 .Home-img2 {
@@ -59,12 +59,7 @@
 
 /* Modified from https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/ */
 .Home-overlay {
-  position: absolute;
-  z-index: 10;
   background-color: rgba(213, 127, 57, 0.3);
-  top: 40vh;
-  width: 100vw;
-  height: 60vh;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
 }
 
