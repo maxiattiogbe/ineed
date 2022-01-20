@@ -87,7 +87,7 @@ const Home = () => {
           <span
             class="txt-rotate"
             data-period="100"
-            data-rotate='[ " a 10 ft phone charger cable.", " someone good at drawing.", " help on physics homework."]'></span>
+            data-rotate='[ " a 10 ft phone charger cable. ", " someone good at drawing. ", " help on physics homework. "]'></span>
         </h1>
         <br></br>
         <h1 className="u-flex-alignCenter">... along with anything you'll offer in return ...</h1>
@@ -96,7 +96,7 @@ const Home = () => {
             <span
               class="txt-rotate"
               data-period="100"
-              data-rotate='[ " $10 on Venmo.", " two cups of boba :)  ", " free hugs <3  "]'></span>
+              data-rotate='[ " $10 on Venmo. ", " two cups of boba :)  ", " free hugs <3  "]'></span>
         </h1>
         <br></br>
         <h1 className="u-flex-alignCenter">... and possibly additional details like when and where people can meet you.</h1>
