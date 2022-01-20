@@ -118,7 +118,7 @@ const Home = () => {
         <h1 className="Home-body-title-1 u-textCenter">Claim</h1>
         <hr></hr>
         <br></br>
-        <h1>Claim someone's offer in your feed and direct message them to work out the details.</h1>
+        <h1>Claim someone's offer in your feed and then go to Messages to direct message them to work out the details.</h1>
       </section>
 
       <section className="Home-section">
