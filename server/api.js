@@ -12,6 +12,7 @@ const express = require("express");
 // import models so we can interact with the database
 const User = require("./models/user");
 const Post = require("./models/post");
+const Profile = require("./models/profile");
 
 // import authentication library
 const auth = require("./auth");
@@ -64,7 +65,15 @@ router.post("/addNewPost", (req, res) => {
   newPost.save().then((story) => res.send(story));
 });
 
+router.post("/storeProfile", (req, res) => {
+  const newProfile = new Profile({
+    userId: req.body.userId,
+    college: req.body.college,
+    about: req.body.about
+  });
 
+  newProfile.save();
+});
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {

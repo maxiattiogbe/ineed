@@ -1,5 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useRef } from "react";
 import Modal from "react-modal";
+import { post } from "../../utilities.js";
 
 import "../../utilities.css";
 import "./Profile.css";
@@ -8,7 +9,10 @@ import "./Feed";
 
 const Profile = (props) => {
   const [open, setOpen] = useState(false);
+  const [outerCollegeText, setOuterCollegeText] = useState("");
 
+  const innerCollege = useRef();
+  const innerAbout = useRef();
 
   return (
     <>
@@ -17,9 +21,9 @@ const Profile = (props) => {
     <div className= "flex-child">
     <div className="aboutprofile">
     <div className="boxedprofile">
-      <div className="profilename">About</div>
+      <div className="profilestart">About</div>
       <div className="profileinfo">College</div>
-      <div className="profileinfotext"></div>
+      <div className="profileinfotext">{outerCollegeText}</div>
       <div className="profileinfo">About</div>
       <div className="profileinfotext"></div>
       <div
@@ -34,15 +38,22 @@ const Profile = (props) => {
       <Modal isOpen={open}>
         <div>Edit My Profile</div>
         <div>College</div>
-        <input id="CollegeInputNode" className="CollegeInput"></input>
+        <input className="CollegeInput" ref={innerCollege}></input>
         <div>About</div>
-        <textarea id="AboutTextAreaNode" className="AboutTextArea"></textarea>
+        <textarea className="AboutTextArea" ref={innerAbout}></textarea>
         <div
           className = "saveButton"
           onClick = {
             () => {
               setOpen(!open);
-              console.log();
+              post("/api/storeProfile",
+                {
+                  userId: props.userId,
+                  college: innerCollege.current.value,
+                  about: innerAbout.current.value
+                }
+              );
+              console.log("Hello");
             }
           }>
           Save

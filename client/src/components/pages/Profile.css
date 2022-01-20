@@ -12,16 +12,20 @@
   border: 1px solid gray;
 }
 
+.profilestart {
+  color: orange;
+}
+
 .profileinfo {
   color: gray;
 }
 
-.AboutTextArea {
-  width: 20%;
+.profileinfotext {
+  color: black;
 }
 
-.profileinfotext {
-  color: var(--second);
+.AboutTextArea {
+  width: 20%;
 }
 
 .editButton {
@@ -50,9 +54,6 @@
   width: 90%;
   float: right;
   padding: 20px;
-}
-.profilename {
-  color: darkgray;
 }
 
 .ineedposts {

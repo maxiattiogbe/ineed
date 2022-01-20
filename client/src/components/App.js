@@ -54,7 +54,7 @@ const App = () => {
         <Router>
           <Home path="/" />
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-          <Profile path="/profile" name={userName} />
+          <Profile path="/profile" name={userName} userId={userId} />
           <Feed path="/feed" />
           <NewPost path="/new-post" name={userName}/>
           <NotFound default />
