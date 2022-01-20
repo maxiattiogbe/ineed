@@ -65,14 +65,63 @@ router.post("/addNewPost", (req, res) => {
   newPost.save().then((story) => res.send(story));
 });
 
-router.post("/storeProfile", (req, res) => {
-  const newProfile = new Profile({
-    userId: req.body.userId,
-    college: req.body.college,
-    about: req.body.about
-  });
+router.get("/getProfile", (req, res) => {
+  Profile.findOne({userId: req.query.userId}).then(
+    (profile) =>
+    {
+      if (profile === null)
+      {
+        /*
+        console.log("Here it is null!");
+        */
 
-  newProfile.save();
+        res.send(null);
+      }
+      else
+      {
+        /*
+        console.log("Here it is not null!");
+        */
+
+        res.send(profile);
+      }
+    }
+  );
+});
+
+router.post("/updateOrStoreProfile", (req, res) => {
+  Profile.findOne({userId: req.body.userId}).then(
+    (profile) => {
+      if (profile === null)
+      {
+        /*
+        console.log("It's null!");
+        console.log(req.body.userId);
+        console.log(typeof(req.body.userId));
+        */
+        
+        const newProfile = new Profile({
+          userId: req.body.userId,
+          college: req.body.college,
+          about: req.body.about
+        });
+      
+        newProfile.save();
+      }
+      else
+      {
+        /*
+        console.log("It's not null!");
+        */
+        
+        profile.userId = req.body.userId;
+        profile.college = req.body.college;
+        profile.about = req.body.about;
+
+        profile.save();
+      }
+    }
+  );
 });
 
 // anything else falls to this "not found" case
