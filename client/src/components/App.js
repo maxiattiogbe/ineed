@@ -6,6 +6,7 @@ import Login from "./pages/Login.js";
 import NavBar from "./modules/NavBar.js"
 import Feed from "./pages/Feed.js";
 import NewPost from "./pages/NewPost.js";
+import Messages from "./pages/Messages.js";
 import Profile from "./pages/Profile.js";
 import "../utilities.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -62,6 +63,9 @@ const App = () => {
           )}
           {userId && (
             <NewPost path="/new-post" name={userName}/>
+          )}
+          {userId && (
+            <Messages path="/messages"/>
           )}
           <NotFound default />
         </Router>

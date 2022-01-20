@@ -58,10 +58,10 @@
 }
 
 /* Modified from https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/ */
-.overlay {
+.Home-overlay {
   position: absolute;
   z-index: 10;
-  background-color: rgba(213, 127, 57, 0.2);
+  background-color: rgba(213, 127, 57, 0.3);
   top: 40vh;
   width: 100vw;
   height: 60vh;

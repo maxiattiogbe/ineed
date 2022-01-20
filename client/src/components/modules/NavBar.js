@@ -20,9 +20,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
         
         {userId && (
           <Link to={`/profile/`} className="NavBar-link">
-            {/* <div className = "profile"> */}
             Profile
-            {/* </div> */}
           </Link>
         )}
         {userId && (
@@ -33,6 +31,11 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
         {userId && (
           <Link to={`/new-post/`} className="NavBar-link">
             New Post
+          </Link>
+        )}
+        {userId && (
+          <Link to={`/messages/`} className="NavBar-link">
+            Messages
           </Link>
         )}
         <div className="NavBar-link u-inlineBlock">
