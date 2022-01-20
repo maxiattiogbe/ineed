@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 import "../../utilities.css";
@@ -14,12 +15,14 @@ const Login = ({ userId, handleLogin, handleLogout }) => {
         <br></br>
         <div className="u-textCenter">
             {userId ? (
-            <GoogleLogout
-            clientId={GOOGLE_CLIENT_ID}
-            buttonText="Logout"
-            onLogoutSuccess={handleLogout}
-            onFailure={(err) => console.log(err)}
-            />
+            <Link to={`/`} className="NavBar-link" >
+              <GoogleLogout
+              clientId={GOOGLE_CLIENT_ID}
+              buttonText="Logout"
+              onLogoutSuccess={handleLogout}
+              onFailure={(err) => console.log(err)}
+              />
+          </Link>
         ) : (
             <GoogleLogin
             clientId={GOOGLE_CLIENT_ID}

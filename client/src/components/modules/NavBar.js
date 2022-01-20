@@ -37,12 +37,14 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
         )}
         <div className="NavBar-link u-inlineBlock">
           {userId ? (
-              <GoogleLogout
-              clientId={GOOGLE_CLIENT_ID}
-              buttonText="Logout"
-              onLogoutSuccess={handleLogout}
-              onFailure={(err) => console.log(err)}
-              />
+              <Link to={`/`} className="NavBar-link" >
+                <GoogleLogout
+                clientId={GOOGLE_CLIENT_ID}
+                buttonText="Logout"
+                onLogoutSuccess={handleLogout}
+                onFailure={(err) => console.log(err)}
+                />
+              </Link>
           ) : (
               <GoogleLogin
               clientId={GOOGLE_CLIENT_ID}

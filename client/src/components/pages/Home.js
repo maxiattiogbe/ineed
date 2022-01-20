@@ -11,17 +11,11 @@ const Home = () => {
       </div>  */}
      <div className="Home-body-title-2 u-inlineBlock u-textCenter Home-img" height="60%">
        <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
        The social way to get
        <br></br>
        what you need.
        <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
-       <br></br>
+      <br></br>
       </div>
 
      <br></br>
