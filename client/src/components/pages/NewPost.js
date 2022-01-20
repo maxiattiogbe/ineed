@@ -16,12 +16,12 @@ let datetime = todayDate + " @ " + currentdate;
         <div className="body-title-2 u-textCenter NewPost">New Post</div>
         <div className="MiddleClass">
         <label className="LabelClass">
-            <div className="InsideClass INeedTextClass">I need:</div>
-            <textarea  placeholder="enter a need (items, skills, help) " type="text" className="InsideClass INeedClass textbackground" value={currentINeed} onChange={event => setCurrentINeed(event.target.value)} />
+            <div className="InsideClass INeedTextClass">I need: (*Required)</div>
+            <textarea placeholder="enter a need (items, skills, help) " type="text" className="InsideClass INeedClass textbackground" value={currentINeed} onChange={event => setCurrentINeed(event.target.value)} />
         </label>
         <label className="LabelClass">
-            <div className="InsideClass IOfferTextClass">I offer:</div>
-            <textarea  placeholder="enter an offer (venmo, cash, favors)" type="text" className="InsideClass IOfferClass textbackground" value={currentIOffer} onChange={event => setCurrentIOffer(event.target.value)} />
+            <div className="InsideClass IOfferTextClass">I offer: (*Required)</div>
+            <textarea placeholder="enter an offer (venmo, cash, favors)" type="text" className="InsideClass IOfferClass textbackground" value={currentIOffer} onChange={event => setCurrentIOffer(event.target.value)} />
         </label>
         <label className="LabelClass">
             <div className="InsideClass">Other:</div>
@@ -30,9 +30,14 @@ let datetime = todayDate + " @ " + currentdate;
         <button type="button" className="btn btn-warning" value="Submit" onClick={
             () => 
             {   
-                 window.location.href = `/feed/`;
-                //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
-                post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
+                if (currentINeed !== "" && currentIOffer !=="" ) {
+                    window.location.href = `/feed/`;
+                    //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
+                    post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
+                } else {
+                    alert("\"I need\" and \"I offer\" are required fields")
+                }
+                
             }
         }>
             Submit!
