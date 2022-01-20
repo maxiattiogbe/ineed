@@ -7,15 +7,73 @@
 
 .Home-body-title-2 {
   color: var(--primary);
+  font-size: 90px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.Home-body-title-3 {
+  color: var(--secondary);
+  font-size: 90px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.Home-body-title-4 {
+  color: var(--white);
   font-size: 150px;
   font-weight: 400;
   width: 100%;
 }
 
+.Home-body-title-5 {
+  color: var(--primary--dim);
+  font-size: 150px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.Home-body-title-6 {
+  color: var(--secondary--dim);
+  font-size: 150px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.Home-body-title-7 {
+  color: var(--black);
+  font-size: 75px;
+  font-weight: 400;
+  width: 100%;
+}
+
 .Home-img {
-  background-image: url(https://images.pexels.com/photos/4827509/pexels-photo-4827509.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background-image: url(https://images.pexels.com/photos/6146951/pexels-photo-6146951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.Home-img2 {
+  width: 100%;
+}
+
+/* Modified from https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/ */
+.overlay {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(213, 127, 57, 0.2);
+  top: 40vh;
+  width: 100vw;
+  height: 60vh;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+.Home-section {
+  padding: var(--l);
+}
+
+.Home-section2 {
+  padding: var(--xl);
 }
 
 .typewriter {
