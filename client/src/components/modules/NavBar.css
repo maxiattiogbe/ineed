@@ -1,7 +1,6 @@
 .Bar {
   position: sticky;
   top: 0;
-  z-index: 20;
 }
 .NavBar-container {
   padding: var(--s) var(--m);
