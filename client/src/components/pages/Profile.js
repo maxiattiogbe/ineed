@@ -92,10 +92,10 @@ const Profile = (props) => {
         < img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic" ></img>
        <div className = "profilename">{props.name}</div> 
        <br></br>
-       <div className = "ineedtitle">ineed</div>
+       <div className = "ineedtitle">I need</div>
         <div className = "ineedposts"> </div> 
         <br></br>
-        <div className = "iwanttitle">iwant</div>
+        <div className = "ihavetitle">I have</div>
         <div className = "ineedposts"> </div>
         <br></br>
     </div>

@@ -61,6 +61,10 @@
   border: 1px solid lightgray;
 }
 
-.iwanttitle {
+.ineedtitle {
+  color: var(--primary);
+}
+
+.ihavetitle {
   color: var(--secondary);
 }
