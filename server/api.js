@@ -98,12 +98,27 @@ router.post("/addNewPost", (req, res) => {
 });
 
 router.post("/deletePost", (req, res) => {
+  /*
   console.log("Hello there");
   console.log(req.body.postId);
   console.log(typeof(req.body.postId));
+  */
+
   Post.deleteOne({_id: req.body.postId}).then(
     () => {
-      console.log("Completed");
+      console.log("Done");
+    }
+  );
+});
+
+router.post("/editPost", (req, res) => {
+  Post.findOne({_id: req.body.postId}).then(
+    (post) => {
+      post.iNeed = req.body.iNeed;
+      post.iOffer = req.body.iOffer;
+      post.other = req.body.other;
+
+      post.save();
     }
   )
 });
@@ -129,12 +144,6 @@ router.post("/updateOrStoreProfile", (req, res) => {
     (profile) => {
       if (profile === null)
       {
-        /*
-        console.log("It's null!");
-        console.log(req.body.userId);
-        console.log(typeof(req.body.userId));
-        */
-        
         const newProfile = new Profile({
           userId: req.body.userId,
           college: req.body.college,
@@ -145,10 +154,6 @@ router.post("/updateOrStoreProfile", (req, res) => {
       }
       else
       {
-        /*
-        console.log("It's not null!");
-        */
-        
         profile.userId = req.body.userId;
         profile.college = req.body.college;
         profile.about = req.body.about;
