@@ -97,24 +97,27 @@ router.post("/addNewPost", (req, res) => {
   newPost.save();
 });
 
+router.post("/deletePost", (req, res) => {
+  console.log("Hello there");
+  console.log(req.body.postId);
+  console.log(typeof(req.body.postId));
+  Post.deleteOne({_id: req.body.postId}).then(
+    () => {
+      console.log("Completed");
+    }
+  )
+});
+
 router.get("/getProfile", (req, res) => {
   Profile.findOne({userId: req.query.userId}).then(
     (profile) =>
     {
       if (profile === null)
       {
-        /*
-        console.log("Here it is null!");
-        */
-
         res.send(null);
       }
       else
       {
-        /*
-        console.log("Here it is not null!");
-        */
-
         res.send(profile);
       }
     }

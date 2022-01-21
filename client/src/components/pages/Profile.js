@@ -28,10 +28,6 @@ const Profile = (props) => {
     get("/api/receiveUserPosts", {userId: props.userId}).then(
       (posts) => {
         setPosts(posts.reverse());
-
-        /*
-        console.log(posts);
-        */
       }
     );
   }, []);
@@ -39,6 +35,7 @@ const Profile = (props) => {
   let reactPosts = posts.map(
     (post) =>
       <Post
+        id={post._id}
         page="profile"
         name={post.name} 
         ineed={post.iNeed} 

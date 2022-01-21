@@ -1,14 +1,19 @@
-import {get} from "../utilities.js";
-import React, { Component } from "react";
+import {get, post} from "../utilities.js";
+import React, {Component, useState} from "react";
 import "../utilities.css";
 
-const Post = ({name,ineed,offer,other,datetime,page}) => {
+const Post = ({id, name, ineed, offer, other, datetime, page}) => {
+    const [visible, setVisible] = useState(true);
+
+    console.log(id);
+
     return (
-      
+        <>
+        { visible &&
         <div className="boxed">
-        < img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic" ></img>
-       <div className = "name">{name}</div> 
-       <br></br>
+        <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
+        <div className = "name">{name}</div> 
+        <br></br>
         <div className = "ineed">I Need</div> 
         <div className = "postInfoNeed">{ineed}</div>
         <br></br>
@@ -20,13 +25,35 @@ const Post = ({name,ineed,offer,other,datetime,page}) => {
         <br></br>
         <div class = "time">{datetime}</div>
         <br></br>
-        <button type="button" class="btn btn-outline-success">Message</button>
+        <button class="btn btn-outline-success">Message</button>
         <br></br>
         {
-                page === "profile" &&
-                <button type="button" class="btn btn-outline-success">Edit</button>
+            page === "profile" &&
+            <button
+                class="btn btn-outline-success"
+                >
+                Edit
+            </button>
+        }
+        {
+            page === "profile" &&
+            <button
+                class = "btn btn-outline-success"
+                onClick = {
+                    () => {
+                        console.log("Here");
+                        console.log(id);
+                        setVisible(false);
+                        post("/api/deletePost", {postId: id});
+                    }
+                }
+                >
+                Delete
+            </button>
         }
         </div>
+        }
+        </>
     );
   };
   
