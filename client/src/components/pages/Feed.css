@@ -2,11 +2,10 @@
   border: 1px solid grey;
   border-radius: var(--xl);
   padding: 100px 100px 100px 100px;
-  margin: var(--xl);
-  width: 70%;
-  margin: var(--xl) auto;
+  margin: var(--xl) var(--m);
   background-color: rgb(224, 220, 212);
-  font-size: 1.2vw;
+  /* font-size: 1.2vw; */
+  font-size: 2vw;
 }
 .profilepic {
   border-radius: 50%;
@@ -17,7 +16,8 @@
 .name {
   color: black;
   font-weight: bold;
-  font-size: 1.5vw;
+  /* font-size: 1.5vw; */
+  font-size: 3vw;
 }
 
 .ineed {
@@ -61,6 +61,7 @@
 .posts {
   flex: 3;
   border: 1px solid gray;
+  width: 100%;
 }
 
 .search {
