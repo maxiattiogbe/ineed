@@ -93,6 +93,24 @@ const Home = () => {
         <br></br>
      </section>
 
+     <section className="Home-section5 u-textCenter"> 
+      <section className="Home-section4 u-inlineBlock">
+          <h1 className="Home-body-title-4">1. Post</h1>
+          <hr></hr>
+          <img src="../../../send.png" className="Home-img2"/>
+      </section>
+      <section className="Home-section2 u-inlineBlock">
+          <h1 className="Home-body-title-4">2. Claim</h1>
+          <hr></hr>
+          <img src="../../../tick-mark.png" className="Home-img2"/>
+      </section>
+      <section className="Home-section3 u-inlineBlock">
+          <h1 className="Home-body-title-4">3. Meet</h1>
+          <hr></hr>
+          <img src="../../../deal.png" className="Home-img2"/>
+      </section>
+     </section>
+
       <section className="Home-section">
         <h1 className="Home-body-title-1 u-textCenter">Post</h1>
         <hr></hr>
@@ -122,7 +140,7 @@ const Home = () => {
         <h1 className="Home-body-title-1 u-textCenter">Claim</h1>
         <hr></hr>
         <br></br>
-        <h1>Claim someone's offer in your feed and then go to Messages to direct message them to work out the details.</h1>
+        <h1>Claim someone's offer in your feed and then direct message them in Messages to work out the details.</h1>
       </section>
 
       <section className="Home-section">
@@ -131,7 +149,9 @@ const Home = () => {
         <br></br>
         <h1>Meet up to get what you need! If you're lucky, you might also get a new friend as a bonus.</h1>
       </section>
-     
+      <div className="u-textCenter">
+        <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
+      </div>
     </>
   );
 };

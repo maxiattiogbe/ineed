@@ -1,9 +1,10 @@
 .boxed {
   border: 1px solid grey;
+  border-radius: var(--xl);
   padding: 100px 100px 100px 100px;
+  margin: var(--xl);
   width: 70%;
-  margin-left: 2px;
-  margin-right:20px;
+  margin: var(--xl) auto;
   background-color: rgb(224, 220, 212);
 }
 .profilepic {
@@ -13,15 +14,13 @@
 }
 
 .name {
-  color:black;
+  color: black;
   font-weight: bold;
   font-size: 20px;
-  
 }
 
 .ineed {
   color: orange;
-  
 }
 .ioffer {
   color: var(--secondary);
@@ -58,16 +57,14 @@
   color: gray;
 }
 
-.posts{
+.posts {
   flex: 3;
   border: 1px solid gray;
-  
 }
 
-.search{
+.search {
   position: sticky;
   top: 90px;
   z-index: 20;
   background-color: white;
 }
-

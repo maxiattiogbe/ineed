@@ -7,8 +7,8 @@ const Messages = () => {
         <br></br>
         <div className="body-title-2 u-inlineBlock u-textCenter">Messages</div>
         <div class="form-outline">
-  <input type="search" id="form1" class="form-control" placeholder="Search People" aria-label="Search" />
-</div>
+            <input type="search" id="form1" class="form-control" placeholder="Search People" aria-label="Search" />
+        </div>
         <br></br>
     </>
   );
