@@ -76,9 +76,12 @@ const Home = () => {
       <div className="Home-img">
         <div className="Home-body-title-4 u-inlineBlock u-textCenter">
           <br></br>
+          <br></br>
           <div className="Home-overlay">
             The social way to get what you need.
           </div>
+          <br></br>
+          <br></br>
           <br></br>
         </div>
       </div>
@@ -87,6 +90,7 @@ const Home = () => {
         <h1 className="u-textCenter">Need something? We got you.</h1>
         <br></br>
         <h1 className="u-textCenter">Login to get what you need in three easy steps.</h1>
+        <br></br>
      </section>
 
       <section className="Home-section">

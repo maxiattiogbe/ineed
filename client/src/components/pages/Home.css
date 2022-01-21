@@ -1,27 +1,27 @@
 .Home-body-title-1 {
   color: var(--black);
-  font-size: 150px;
+  font-size: 75px;
   font-weight: 400;
   width: 100%;
 }
 
 .Home-body-title-2 {
   color: var(--primary);
-  font-size: 90px;
+  font-size: 50px;
   font-weight: 400;
   width: 100%;
 }
 
 .Home-body-title-3 {
   color: var(--secondary);
-  font-size: 90px;
+  font-size: 50px;
   font-weight: 400;
   width: 100%;
 }
 
 .Home-body-title-4 {
   color: var(--white);
-  font-size: 150px;
+  font-size: 90px;
   font-weight: 400;
   width: 100%;
 }
