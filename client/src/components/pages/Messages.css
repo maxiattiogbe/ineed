@@ -1,52 +1,12 @@
-.Messages-boxed {
-  border: 1px solid grey;
-  padding: 100px 100px 100px 100px;
-  width: 70%;
-  margin: auto;
-  background-color: rgb(224, 220, 212);
-}
-.Messages-profilepic {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.Messages-container {
+  height: calc(100vh - 120px);
 }
 
-.Messages-name {
-  color: black;
-  font-weight: bold;
+.Messages-userList {
+  width: 260px;
+  margin-right: var(--l);
 }
 
-.Messages-ineed {
-  color: orange;
-}
-.Messages-ioffer {
-  color: var(--secondary);
-}
-
-.Messages-other {
-  color: black;
-}
-
-.Messages-postInfoNeed {
-  border: 2px solid orange;
-  color: gray;
-  padding-left: 5px;
-}
-
-.Messages-postInfoOffer {
-  border: 2px solid var(--secondary);
-  color: gray;
-  padding-left: 5px;
-}
-
-.Messages-postInfoOther {
-  border: 2px solid gray;
-  color: gray;
-  padding-left: 5px;
-}
-
-.Messages-time {
-  position: relative;
-  left: 65%;
-  color: gray;
+.Messages-chatContainer {
+  flex-grow: 1;
 }
