@@ -6,6 +6,7 @@
   width: 70%;
   margin: var(--xl) auto;
   background-color: rgb(224, 220, 212);
+  font-size: 1.2vw;
 }
 .profilepic {
   border-radius: 50%;
@@ -16,7 +17,7 @@
 .name {
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .ineed {
