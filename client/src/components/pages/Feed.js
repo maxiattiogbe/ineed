@@ -68,8 +68,9 @@ const Feed = () => {
         <div className="search">
     
         <select className = "selection" class="select" data-mdb-filter="true">
-  <option value="1">Search People</option>
-  <option value="2">Search Posts</option>
+  <option value="1">Search by People</option>
+  <option value="2">Search by need</option>
+  <option value="2">Search by offer</option>
 
 </select>
   
