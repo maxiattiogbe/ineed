@@ -19,8 +19,6 @@ const Post = ({name,ineed,offer,other,datetime}) => {
         <div className = "postInfoOther">{other}</div>
         <br></br>
         <div class = "time">{datetime}</div>
-        <br></br>
-        <div class = "time">{datetime}</div>
         </div>
         
         
