@@ -56,11 +56,10 @@
   padding: 20px;
 }
 
-.ineedposts {
-  padding: 100px 100px 100px;
-  border: 1px solid lightgray;
+.profilename {
+  color: black;
 }
 
-.iwanttitle {
-  color: var(--secondary);
+.ineedtitle {
+  color: gray;
 }

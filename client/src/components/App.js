@@ -56,13 +56,13 @@ const App = () => {
           <Home path="/" />
           <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
           {userId && (
-            <Profile path="/profile" name={userName} userId={userId} />
+            <Profile path="/profile" name={userName} userId={userId}/>
           )}
           {userId && (
             <Feed path="/feed" />
           )}
           {userId && (
-            <NewPost path="/new-post" name={userName}/>
+            <NewPost path="/new-post" name={userName} userId={userId}/>
           )}
           {userId && (
             <Messages path="/messages"/>

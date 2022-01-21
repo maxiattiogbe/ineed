@@ -10,7 +10,7 @@ const NewPost = (props) => {
     const currentdate = new Date().toLocaleTimeString();
     const todayDate = new Date().toLocaleDateString();
 
-let datetime = todayDate + " @ " + currentdate;
+    let datetime = todayDate + " @ " + currentdate;
     return (
         <div className="OuterClass">
         <div className="body-title-2 u-textCenter NewPost">New Post</div>
@@ -30,10 +30,10 @@ let datetime = todayDate + " @ " + currentdate;
         <button type="button" className="btn btn-warning" value="Submit" onClick={
             () => 
             {   
-                if (currentINeed !== "" && currentIOffer !=="" ) {
+                if (currentINeed !== "" && currentIOffer !=="") {
                     window.location.href = `/feed/`;
                     //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
-                    post("/api/addNewPost", {name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
+                    post("/api/addNewPost", {userId: props.userId, name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
                 } else {
                     alert("\"I need\" and \"I offer\" are required fields")
                 }

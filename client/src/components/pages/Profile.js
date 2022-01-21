@@ -65,10 +65,6 @@ const Profile = (props) => {
               );
               setOuterCollegeText(innerCollege.current.value);
               setOuterAbout(innerAbout.current.value);
-
-              /*
-              console.log("Hello");
-              */
             }
           }>
           Save
@@ -89,15 +85,10 @@ const Profile = (props) => {
 
     <div className = "flex-child--featured">
     <div className="boxedprofile">
-        < img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic" ></img>
-       <div className = "profilename">{props.name}</div> 
-       <br></br>
-       <div className = "ineedtitle">ineed</div>
-        <div className = "ineedposts"> </div> 
-        <br></br>
-        <div className = "iwanttitle">iwant</div>
-        <div className = "ineedposts"> </div>
-        <br></br>
+      <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
+      <div className = "profilename">{props.name}</div> 
+      <div className = "ineedtitle">ineed</div>
+      <div className = "ineedposts"></div>
     </div>
     </div>
     </div>

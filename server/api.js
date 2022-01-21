@@ -43,18 +43,23 @@ router.post("/initsocket", (req, res) => {
 // |------------------------------|
 // | write your API methods below!|
 // |------------------------------|
-router.get("/receivePosts",(req,res) => {
+router.get("/receivePosts", (req, res) => {
   Post.find({}).then((posts) => {
     res.send(posts);
-
-    /*
-    console.log("We did it!");
-    */
   });
+});
+
+router.get("/receiveUserPosts", (req, res) => {
+  Post.find({userId: req.query.userId}).then(
+    (posts) => {
+      res.send(posts);
+    }
+  );
 });
 
 router.post("/addNewPost", (req, res) => {
   const newPost = new Post({
+    userId: req.body.userId,
     name: req.body.name,
     iNeed: req.body.iNeed,
     iOffer: req.body.iOffer,
@@ -62,7 +67,7 @@ router.post("/addNewPost", (req, res) => {
     datetime: req.body.datetime
   });
 
-  newPost.save().then((story) => res.send(story));
+  newPost.save();
 });
 
 router.get("/getProfile", (req, res) => {
