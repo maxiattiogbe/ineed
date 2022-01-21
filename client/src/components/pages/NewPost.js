@@ -30,7 +30,7 @@ const NewPost = (props) => {
         <button type="button" className="btn btn-warning" value="Submit" onClick={
             () => 
             {   
-                if (currentINeed !== "" && currentIOffer !=="") {
+                if (currentINeed.replace(/\s+/g, '') !== "" && currentIOffer.replace(/\s+/g, '') !=="") {
                     window.location.href = `/feed/`;
                     //alert(currentName + " " + currentINeed + " " + currentIOffer + " " + currentOther);
                     post("/api/addNewPost", {userId: props.userId, name:props.name, iNeed:currentINeed, iOffer:currentIOffer, other:currentOther, datetime:datetime});
