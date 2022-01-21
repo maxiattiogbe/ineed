@@ -4,7 +4,7 @@
   padding: 100px 100px 100px 100px;
   margin: var(--xl);
   width: 70%;
-  margin: auto;
+  margin: var(--xl) auto;
   background-color: rgb(224, 220, 212);
 }
 .profilepic {
