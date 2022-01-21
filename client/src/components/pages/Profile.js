@@ -39,6 +39,7 @@ const Profile = (props) => {
   let reactPosts = posts.map(
     (post) =>
       <Post
+        page="profile"
         name={post.name} 
         ineed={post.iNeed} 
         offer={post.iOffer} 

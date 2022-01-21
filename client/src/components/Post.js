@@ -2,7 +2,7 @@ import {get} from "../utilities.js";
 import React, { Component } from "react";
 import "../utilities.css";
 
-const Post = ({name,ineed,offer,other,datetime}) => {
+const Post = ({name,ineed,offer,other,datetime,page}) => {
     return (
       
         <div className="boxed">
@@ -21,12 +21,12 @@ const Post = ({name,ineed,offer,other,datetime}) => {
         <div class = "time">{datetime}</div>
         <br></br>
         <button type="button" class="btn btn-outline-success">Message</button>
+        <br></br>
+        {
+                page === "profile" &&
+                <button type="button" class="btn btn-outline-success">Edit</button>
+        }
         </div>
-        
-        
-        
-        
-
     );
   };
   
