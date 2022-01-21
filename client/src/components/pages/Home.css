@@ -60,7 +60,6 @@
 /* Modified from https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/ */
 .Home-overlay {
   background-color: rgba(213, 127, 57, 0.3);
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
 }
 
 .Home-section {
