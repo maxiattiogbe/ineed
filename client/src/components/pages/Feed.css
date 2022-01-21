@@ -2,10 +2,10 @@
   border: 1px solid grey;
   border-radius: var(--xl);
   padding: 100px 100px 100px 100px;
-  margin: var(--xl) var(--m);
+  margin: var(--xl) var(--xl);
   background-color: rgb(224, 220, 212);
   /* font-size: 1.2vw; */
-  font-size: 2vw;
+  font-size: 2 vw;
 }
 .profilepic {
   border-radius: 50%;
@@ -61,7 +61,7 @@
 .posts {
   flex: 3;
   border: 1px solid gray;
-  width: 100%;
+  width: 100vw;
 }
 
 .search {

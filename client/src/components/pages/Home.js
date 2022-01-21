@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useEffect } from "react";
 
 import "../../utilities.css";
 import "./Home.css";
@@ -47,7 +48,7 @@ const Home = () => {
     }, delta);
   };
 
-  window.onload = function() {
+  useEffect(() => {  
     let elements = document.getElementsByClassName('txt-rotate');
     for (let i=0; i<elements.length; i++) {
       let toRotate = elements[i].getAttribute('data-rotate');
@@ -61,7 +62,8 @@ const Home = () => {
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #292a2a }";
     document.body.appendChild(css);
-  };
+     }, [])
+    
   return (
     <>
       <div className="Home-img">
