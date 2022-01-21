@@ -19,11 +19,8 @@ const Post = ({name,ineed,offer,other,datetime}) => {
         <div className = "postInfoOther">{other}</div>
         <br></br>
         <div class = "time">{datetime}</div>
-<<<<<<< HEAD
         <br></br>
         <button type="button" class="btn btn-outline-success">Message</button>
-=======
->>>>>>> 361155e41fcbb3e9a0edb7bec0959da9424024a3
         </div>
         
         
