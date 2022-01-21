@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, useState, useEffect, useRef } from "react";
 import "../../utilities.css";
 import "./Feed.css";
 import {get} from "../../utilities.js";
@@ -26,19 +26,6 @@ const Feed = () => {
      
     }, []);
 
-
-
-
-    /*
-    console.log(posts);
-    */
-
-    /*
-    const addPost = (postObj) => {
-        setPosts([postObj].concat(posts));
-    };
-    */
-
     let postsList = null;
     const hasPosts = posts.length !== 0;
     if(hasPosts) {
@@ -58,27 +45,59 @@ const Feed = () => {
 
     }
     
- 
-    /*
-    console.log(postsList);
-    */
+    const searchBar = useRef();
+    const select = useRef();
 
     return (
         <>
         <div className="search">
-    
-        <select className = "selection" class="select" data-mdb-filter="true">
+        <select className = "selection" class="select" data-mdb-filter="true" ref={select}>
   <option value="1">Search by People</option>
   <option value="2">Search by need</option>
-  <option value="2">Search by offer</option>
-
+  <option value="3">Search by offer</option>
 </select>
-  
 <div class="input-group">
-  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <button type="button" class="btn btn-outline-primary">search</button>
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" ref={searchBar} />
+  <button type="button" class="btn btn-outline-primary" onClick={
+    () => {
+        let searchString = searchBar.current.value;
+
+        if (select.current.value === "1")
+        {
+            get("/api/receivePerson", {name: searchString}).then(
+                (posts) => {
+                    console.log(posts);
+                    setPosts(posts.reverse());
+                }
+            );
+        }
+        else if (select.current.value === "2")
+        {
+            get("/api/receiveNeed", {iNeed: searchString}).then(
+                (posts) => {
+                    console.log(posts);
+                    setPosts(posts.reverse());
+                }
+            );
+
+        }
+        else if (select.current.value === "3")
+        {
+            get("/api/receiveOffer", {iOffer: searchString}).then(
+                (posts) => {
+                    console.log(posts);
+                    setPosts(posts.reverse());
+                }
+            );
+
+        }
+    }
+  }>search</button>
 </div>
   </div>
+
+
+
 
      <div className="posts">
         {postsList}
@@ -91,20 +110,3 @@ const Feed = () => {
 
 
 export default Feed
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-    

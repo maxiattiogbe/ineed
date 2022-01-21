@@ -20,7 +20,7 @@ const Post = ({name,ineed,offer,other,datetime}) => {
         <br></br>
         <div class = "time">{datetime}</div>
         <br></br>
-        <div class = "time">{datetime}</div>
+        <button type="button" class="btn btn-outline-success">Message</button>
         </div>
         
         

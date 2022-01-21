@@ -57,8 +57,19 @@ router.get("/receiveUserPosts", (req, res) => {
   );
 });
 
+router.get("/receivePerson", (req, res) => {
+  console.log(req.query.name);
+  console.log(typeof(req.query.name));
+
+  Post.find({name: new RegExp(req.query.name, "i")}).then(
+    (posts) => {
+      res.send(posts);
+    }
+  );
+});
+
 router.get("/receiveNeed", (req, res) => {
-  Post.find({iNeed: req.query.iNeed}).then(
+  Post.find({iNeed: new RegExp(req.query.iNeed, "i")}).then(
     (posts) => {
       res.send(posts);
     }
