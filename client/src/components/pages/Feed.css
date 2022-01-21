@@ -12,12 +12,15 @@
 }
 
 .name {
-  color: black;
+  color:black;
   font-weight: bold;
+  font-size: 20px;
+  
 }
 
 .ineed {
   color: orange;
+  
 }
 .ioffer {
   color: var(--secondary);
@@ -31,18 +34,21 @@
   border: 2px solid orange;
   color: gray;
   padding-left: 5px;
+  font-size: 20px;
 }
 
 .postInfoOffer {
   border: 2px solid var(--secondary);
   color: gray;
   padding-left: 5px;
+  font-size: 20px;
 }
 
 .postInfoOther {
   border: 2px solid gray;
   color: gray;
   padding-left: 5px;
+  font-size: 20px;
 }
 
 .time {
@@ -50,3 +56,17 @@
   left: 65%;
   color: gray;
 }
+
+.posts{
+  flex: 3;
+  border: 1px solid gray;
+  
+}
+
+.search{
+  position: sticky;
+  top: 90px;
+  z-index: 20;
+  background-color: white;
+}
+

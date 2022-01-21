@@ -4,6 +4,7 @@ import "./Feed.css";
 import {get} from "../../utilities.js";
 import Post from "../Post";
 
+
 const Feed = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -18,10 +19,14 @@ const Feed = () => {
             /*
             console.log(reversedPostObjs);
             */
+          
 
             setPosts(reversedPostObjs);
         });
+     
     }, []);
+
+
 
 
     /*
@@ -53,26 +58,43 @@ const Feed = () => {
 
     }
     
+ 
     /*
     console.log(postsList);
     */
 
     return (
         <>
-     
+        <div className="search">
+    
+        <select className = "selection" class="select" data-mdb-filter="true">
+  <option value="1">Search People</option>
+  <option value="2">Search Posts</option>
+
+</select>
+  
+<div class="input-group">
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" class="btn btn-outline-primary">search</button>
+</div>
+  </div>
+
+     <div className="posts">
         {postsList}
-
+        </div>
         
-
 
         </>
     );
 }
 
+
 export default Feed
 
 
 
+
+  
 
 
 
