@@ -1,6 +1,7 @@
 import React, { Component, useState, useRef, useEffect } from "react";
 import Modal from "react-modal";
 import { get, post } from "../../utilities.js";
+import Post from "../Post";
 
 import "../../utilities.css";
 import "./Profile.css";
@@ -11,6 +12,7 @@ const Profile = (props) => {
   const [open, setOpen] = useState(false);
   const [outerCollegeText, setOuterCollegeText] = useState("");
   const [outerAbout, setOuterAbout] = useState("");
+  const [posts, setPosts] = useState([]);
 
   const innerCollege = useRef();
   const innerAbout = useRef();
@@ -22,7 +24,28 @@ const Profile = (props) => {
         setOuterAbout(profile.about);
       }
     );
+
+    get("/api/receiveUserPosts", {userId: props.userId}).then(
+      (posts) => {
+        setPosts(posts.reverse());
+
+        /*
+        console.log(posts);
+        */
+      }
+    );
   }, []);
+
+  let reactPosts = posts.map(
+    (post) =>
+      <Post
+        name={post.name} 
+        ineed={post.iNeed} 
+        offer={post.iOffer} 
+        other={post.other}
+        datetime = {post.datetime}
+      />
+  );
 
   return (
     <>
@@ -88,7 +111,9 @@ const Profile = (props) => {
       <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
       <div className = "profilename">{props.name}</div> 
       <div className = "ineedtitle">ineed</div>
-      <div className = "ineedposts"></div>
+      <div className = "ineedposts">
+        {reactPosts}
+      </div>
     </div>
     </div>
     </div>
