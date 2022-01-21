@@ -1,5 +1,6 @@
 import {get, post} from "../utilities.js";
 import React, {Component, useState, useRef} from "react";
+import { Link } from "@reach/router";
 import Modal from "react-modal";
 import "../utilities.css";
 
@@ -34,7 +35,9 @@ const Post = ({id, name, ineed, offer, other, datetime, page}) => {
         <br></br>
         <div class = "time">{datetime}</div>
         <br></br>
-        <button class="btn btn-outline-success">Message</button>
+        <Link to={"/messages"} className="NavBar-link" >
+            <button class="btn btn-outline-success">Message</button>
+        </Link>
         <br></br>
         {
             page === "profile" &&
