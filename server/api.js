@@ -57,6 +57,22 @@ router.get("/receiveUserPosts", (req, res) => {
   );
 });
 
+router.get("/receiveNeed", (req, res) => {
+  Post.find({iNeed: req.query.iNeed}).then(
+    (posts) => {
+      res.send(posts);
+    }
+  );
+});
+
+router.get("/receiveOffer", (req, res) => {
+  Post.find({iOffer: req.query.iOffer}).then(
+    (posts) => {
+      res.send(posts);
+    }
+  );
+});
+
 router.post("/addNewPost", (req, res) => {
   const newPost = new Post({
     userId: req.body.userId,

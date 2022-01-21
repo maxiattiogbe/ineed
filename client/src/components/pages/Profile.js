@@ -71,9 +71,9 @@ const Profile = (props) => {
       <Modal isOpen={open}>
         <div>Edit My Profile</div>
         <div>College</div>
-        <input className="CollegeInput" ref={innerCollege}></input>
+        <input className="CollegeInput" ref={innerCollege} defaultValue={outerCollegeText}></input>
         <div>About</div>
-        <textarea className="AboutTextArea" ref={innerAbout}></textarea>
+        <textarea className="AboutTextArea" ref={innerAbout}>{outerAbout}</textarea>
         <div
           className = "saveButton"
           onClick = {
