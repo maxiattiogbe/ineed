@@ -104,10 +104,6 @@
   background-color: var(--off_white);
   color: var(--white);
 }
-/* 
-.Home-section2 {
-  padding: var(--xl);
-} */
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */

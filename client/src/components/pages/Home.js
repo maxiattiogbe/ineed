@@ -135,6 +135,10 @@ const Home = () => {
         <br></br>
         <h1>Want to respond to someone's offer in your feed? Click Message on their post or use to the navigation bar to go
            to Messages and direct messaging them to work out the details.</h1>
+           <br></br>
+        <div className="u-textCenter">
+          <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif"/>
+        </div>
       </section>
 
       <section className="Home-section">
@@ -142,6 +146,10 @@ const Home = () => {
         <hr></hr>
         <br></br>
         <h1>Meet up to get what you need! If you're lucky, you might also get a new friend as a bonus.</h1>
+        <br></br>
+        <div className="u-textCenter">
+          <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif"/>
+        </div>
       </section>
       <div className="u-textCenter">
         <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
