@@ -1,5 +1,5 @@
 import {get, post} from "../utilities.js";
-import React, {Component, useState, useRef} from "react";
+import React, {Component, useState, useRef, useEffect} from "react";
 import { Link } from "@reach/router";
 import Modal from "react-modal";
 import "../utilities.css";
@@ -16,6 +16,15 @@ const Post = ({id, name, ineed, offer, other, datetime, page}) => {
     const innerOther = useRef();
 
     console.log(id);
+
+    useEffect(
+        () =>
+        {
+            setThisNeed(ineed);
+            setThisOffer(offer);
+            setThisOther(other);
+        }
+    );
 
     return (
         <>
