@@ -30,7 +30,15 @@ import "./Chat.css";
 const Chat = (props) => {
   return (
     <>
-      <h3>Chatting with {props.data.recipient.name}</h3>
+      <h3>
+        {"Chatting with "}
+        {
+          props.data.recipient.name !== "ALL CHAT"
+          &&
+          <img className="profilepic" src={props.data.recipient.picture}/>
+        }
+        {" " + props.data.recipient.name}
+      </h3>
       <div>
         {props.data.messages.map((m, i) => (
           <SingleMessage message={m} key={i} />

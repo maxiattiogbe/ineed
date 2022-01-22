@@ -21,6 +21,11 @@ const SingleUser = (props) => {
         props.setActiveUser(props.user);
       }}
     >
+      {
+        props.user.name !== "ALL CHAT"
+        &&
+        <img className = "profilepic" src={props.user.picture} />
+      }
       {props.user.name}
     </div>
   );
