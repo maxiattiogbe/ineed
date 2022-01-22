@@ -44,10 +44,12 @@ const Post = ({id, name, ineed, offer, other, datetime, page}) => {
         <br></br>
         <div class = "time">{datetime}</div>
         <br></br>
-        <Link to={"/messages"} className="NavBar-link" >
-            <button class="btn btn-outline-success">Message</button>
-        </Link>
-        <br></br>
+        {
+            page !== "profile" &&
+            <Link to={"/messages"} className="NavBar-link" >
+                <button class="btn btn-outline-success">Message</button>
+            </Link>
+        }
         {
             page === "profile" &&
             <>
