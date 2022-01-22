@@ -33,6 +33,7 @@ const Feed = () => {
         postsList = posts.map((postObj) => 
             <Post
                 name={postObj.name}
+                picture={postObj.picture}
                 ineed={postObj.iNeed}
                 offer={postObj.iOffer}
                 other={postObj.other}

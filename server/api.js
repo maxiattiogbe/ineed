@@ -86,9 +86,12 @@ router.get("/receiveOffer", (req, res) => {
 });
 
 router.post("/addNewPost", (req, res) => {
+  console.log(req.user);
+
   const newPost = new Post({
     userId: req.body.userId,
     name: req.body.name,
+    picture: req.user.picture,
     iNeed: req.body.iNeed,
     iOffer: req.body.iOffer,
     other: req.body.other,

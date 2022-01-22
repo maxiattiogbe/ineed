@@ -37,7 +37,8 @@ const Profile = (props) => {
       <Post
         id={post._id}
         page="profile"
-        name={post.name} 
+        name={post.name}
+        picture={post.picture}
         ineed={post.iNeed} 
         offer={post.iOffer} 
         other={post.other}
@@ -106,7 +107,7 @@ const Profile = (props) => {
 
     <div className = "flex-child--featured">
     <div className="boxedprofile">
-      <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
+      <img className = "profilepic" src = {props.picture} alt = "profile pic"></img>
       <div className = "profilename">{props.name}</div> 
       <div className = "ineedtitle">My Posts</div>
       <div className = "ineedposts">

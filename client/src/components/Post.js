@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 import Modal from "react-modal";
 import "../utilities.css";
 
-const Post = ({id, name, ineed, offer, other, datetime, page}) => {
+const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
     const [visible, setVisible] = useState(true);
     const [open, setOpen] = useState(false);
     const [thisNeed, setThisNeed] = useState(ineed);
@@ -30,7 +30,7 @@ const Post = ({id, name, ineed, offer, other, datetime, page}) => {
         <>
         { visible &&
         <div className="boxed">
-        <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
+        <img className = "profilepic" src = {picture} alt = "profile pic"></img>
         <div className = "name">{name}</div> 
         <br></br>
         <div className = "ineed">I need</div>

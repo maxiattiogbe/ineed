@@ -24,6 +24,7 @@ import "./App.css";
 const App = () => {
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
+  const [userPicture, setUserPicture] = useState(null);
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
@@ -33,6 +34,7 @@ const App = () => {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
         setUserName(user.name);
+        setUserPicture(user.picture);
       }
     });
   }, []);
@@ -45,6 +47,7 @@ const App = () => {
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
       setUserName(user.name);
+      setUserPicture(user.picture);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
@@ -53,6 +56,7 @@ const App = () => {
     console.log("Logged out successfully!");
     setUserId(null);
     setUserName(null);
+    setUserPicture(null);
     post("/api/logout");
   };
 
@@ -67,7 +71,7 @@ const App = () => {
         <Home path="/" />
         <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
         {userId && (
-          <Profile path="/profile" name={userName} userId={userId}/>
+          <Profile path="/profile" name={userName} userId={userId} picture={userPicture}/>
         )}
         {userId && (
           <Feed path="/feed" />
