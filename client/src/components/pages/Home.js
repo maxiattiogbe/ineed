@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       <section className="Home-section">
-        <h1 className="Home-body-title-1 u-textCenter">Messsage</h1>
+        <h1 className="Home-body-title-1 u-textCenter">Message</h1>
         <hr></hr>
         <br></br>
         <h1>Want to respond to someone's offer in your feed? Click Message on their post or use to the navigation bar to go
