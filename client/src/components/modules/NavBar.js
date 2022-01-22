@@ -45,7 +45,13 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
                 clientId={GOOGLE_CLIENT_ID}
                 buttonText="Logout"
                 onLogoutSuccess={handleLogout}
-                onFailure={(err) => console.log(err)}
+                onFailure={
+                  (err) => {
+                    /*
+                    console.log(err);
+                    */
+                  }
+                }
                 />
               </Link>
           ) : (
@@ -53,7 +59,13 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
               clientId={GOOGLE_CLIENT_ID}
               buttonText="Login with Google"
               onSuccess={handleLogin}
-              onFailure={(err) => console.log(err)}
+              onFailure={
+                (err) => {
+                  /*
+                  console.log(err);
+                  */
+                }
+              }
               />
           )}
         </div>

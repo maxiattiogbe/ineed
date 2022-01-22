@@ -25,7 +25,9 @@ const Feed = () => {
         });
     }, []);
 
+    /*
     console.log(posts);
+    */
 
     let postsList = null;
     const hasPosts = posts.length !== 0;
@@ -46,7 +48,9 @@ const Feed = () => {
         postsList = <div>No posts</div>;
     }
 
+    /*
     console.log(postsList);
+    */
     
     const searchBar = useRef();
     const select = useRef();
@@ -70,7 +74,10 @@ const Feed = () => {
                     get("/api/receivePerson", {name: searchString}).then(
                         (returnedPosts) =>
                         {
+                            /*
                             console.log(returnedPosts);
+                            */
+                            
                             setPosts(returnedPosts.reverse());
                         }
                     );
@@ -80,7 +87,10 @@ const Feed = () => {
                     get("/api/receiveNeed", {iNeed: searchString}).then(
                         (posts) =>
                         {
+                            /*
                             console.log(posts);
+                            */
+                            
                             setPosts(posts.reverse());
                         }
                     );
@@ -90,7 +100,10 @@ const Feed = () => {
                     get("/api/receiveOffer", {iOffer: searchString}).then(
                         (posts) =>
                         {
+                            /*
                             console.log(posts);
+                            */
+                            
                             setPosts(posts.reverse());
                         }
                     );

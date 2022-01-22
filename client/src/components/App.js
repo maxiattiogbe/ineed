@@ -28,7 +28,9 @@ const App = () => {
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
+      /*
       console.log("We're here");
+      */
 
       if (user._id) {
         // they are registed in the database, and currently logged in.
@@ -53,7 +55,10 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    /*
     console.log("Logged out successfully!");
+    */
+    
     setUserId(null);
     setUserName(null);
     setUserPicture(null);

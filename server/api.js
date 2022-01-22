@@ -59,8 +59,10 @@ router.get("/receiveUserPosts", (req, res) => {
 });
 
 router.get("/receivePerson", (req, res) => {
+  /*
   console.log(req.query.name);
   console.log(typeof(req.query.name));
+  */
 
   Post.find({name: new RegExp(req.query.name, "i")}).then(
     (posts) => {
@@ -86,7 +88,9 @@ router.get("/receiveOffer", (req, res) => {
 });
 
 router.post("/addNewPost", (req, res) => {
+  /*
   console.log(req.user);
+  */
 
   const newPost = new Post({
     userId: req.body.userId,
@@ -110,7 +114,9 @@ router.post("/deletePost", (req, res) => {
 
   Post.deleteOne({_id: req.body.postId}).then(
     () => {
+      /*
       console.log("Done");
+      */
     }
   );
 });
@@ -187,8 +193,10 @@ router.get("/chat", (req, res) => {
 });
 
 router.post("/message", auth.ensureLoggedIn, (req, res) => {
+  /*
   console.log("There is");
   console.log(req.body.recipient.name);
+  */
 
   /*
   console.log(`Received a chat message from ${req.user.name}: ${req.body.content}`);
@@ -214,14 +222,19 @@ router.post("/message", auth.ensureLoggedIn, (req, res) => {
 });
 
 router.get("/activeUsers", (req, res) => {
+  /*
   console.log("We're here");
+  */
 
   res.send({ activeUsers: socketManager.getAllConnectedUsers() });
 });
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
+  /*
   console.log(`API route not found: ${req.method} ${req.url}`);
+  */
+  
   res.status(404).send({ msg: "API route not found" });
 });
 
