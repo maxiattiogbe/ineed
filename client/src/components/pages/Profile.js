@@ -108,7 +108,7 @@ const Profile = (props) => {
     <div className="boxedprofile">
       <img className = "profilepic" src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt = "profile pic"></img>
       <div className = "profilename">{props.name}</div> 
-      <div className = "ineedtitle">ineed</div>
+      <div className = "ineedtitle">My Posts</div>
       <div className = "ineedposts">
         {reactPosts}
       </div>
