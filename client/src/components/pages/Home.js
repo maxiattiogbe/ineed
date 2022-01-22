@@ -137,7 +137,7 @@ const Home = () => {
            to Messages and direct messaging them to work out the details.</h1>
            <br></br>
         <div className="u-textCenter">
-          <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif"/>
+          <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
         </div>
       </section>
 
@@ -148,7 +148,7 @@ const Home = () => {
         <h1>Meet up to get what you need! If you're lucky, you might also get a new friend as a bonus.</h1>
         <br></br>
         <div className="u-textCenter">
-          <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif"/>
+          <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif" className="Home-img2"/>
         </div>
       </section>
       <div className="u-textCenter">
