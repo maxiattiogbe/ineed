@@ -7,5 +7,5 @@
 }
 
 .Messages-chatContainer {
-
+  flex-grow: 1;
 }

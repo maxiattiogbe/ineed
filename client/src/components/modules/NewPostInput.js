@@ -21,14 +21,8 @@ const NewPostInput = (props) => {
 
   // called when the user hits "Submit" for a new post
   const handleSubmit = (event) => {
-    console.log("Hello");
-    console.log(value);
-    console.log(props.onSubmit);
-
     props.onSubmit(value);
-
-    console.log(value);
-
+    
     /*
     event.preventDefault();
     */
@@ -40,23 +34,21 @@ const NewPostInput = (props) => {
   };
 
   return (
-    <div className="u-flex">
-      <input
-        type="text"
-        placeholder={props.defaultText}
-        value={value}
-        onChange={handleChange}
-        className="NewPostInput-input"
-      />
-      <button
-        type="submit"
-        className="NewPostInput-button u-pointer"
-        value="Submit"
-        onClick={handleSubmit}
-      >
+    <>
+      <textarea
+        className = "NewMessageTextArea"
+        placeholder = {props.defaultText}
+        value = {value}
+        onChange = {handleChange}
+        >
+      </textarea>
+      <div
+        className = "NewMessageSubmit"
+        onClick = {handleSubmit}
+        >
         Submit
-      </button>
-    </div>
+      </div>
+    </>
   );
 };
 
@@ -80,24 +72,6 @@ const NewComment = (props) => {
 };
 
 /**
- * New Story is a New Post component for comments
- *
- * Proptypes
- * @param {string} defaultText is the placeholder text
- */
-const NewStory = (props) => {
-  const addStory = (value) => {
-    const body = { content: value };
-    post("/api/story", body).then((story) => {
-      // display this story on the screen
-      props.addNewStory(story);
-    });
-  };
-
-  return <NewPostInput defaultText="New Story" onSubmit={addStory} />;
-};
-
-/**
  * New Message is a New Message component for messages
  *
  * Proptypes
@@ -105,13 +79,16 @@ const NewStory = (props) => {
  */
 const NewMessage = (props) => {
   const sendMessage = (value) => {
+    /*
     console.log("Hello everyone.");
-
     console.log(props.recipient);
+    */
 
     const body = { recipient: props.recipient, content: value };
 
+    /*
     console.log(body);
+    */
 
     post("/api/message", body);
   };
@@ -119,4 +96,4 @@ const NewMessage = (props) => {
   return <NewPostInput defaultText="New Message" onSubmit={sendMessage} />;
 }
 
-export { NewComment, NewStory, NewMessage };
+export { NewComment, NewMessage };

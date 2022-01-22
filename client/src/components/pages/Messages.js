@@ -219,7 +219,7 @@ const Messages = (props) => {
             active={activeChat.recipient}
             />
         </div>
-        <div>
+        <div className="Messages-chatContainer">
           <Chat data={activeChat}/>
         </div>
       </div>
