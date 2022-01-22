@@ -47,7 +47,7 @@ const Profile = (props) => {
 
   return (
     <>
-    <div className="body-title-2 u-textCenter">Profile</div>
+    <div className="body-title-1 u-textCenter">Profile</div>
     <div className = "flex-container">
     <div className= "flex-child">
     <div className="aboutprofile">

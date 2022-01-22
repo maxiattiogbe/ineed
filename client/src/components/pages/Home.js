@@ -95,7 +95,7 @@ const Home = () => {
       <section className="Home-section2 u-inlineBlock">
           <h1 className="Home-body-title-4">2. Message</h1>
           <hr></hr>
-          <img src="../../../tick-mark.png" className="Home-img2"/>
+          <img src="../../../chat.png" className="Home-img2"/>
       </section>
       <section className="Home-section3 u-inlineBlock">
           <h1 className="Home-body-title-4">3. Meet</h1>
@@ -133,7 +133,8 @@ const Home = () => {
         <h1 className="Home-body-title-1 u-textCenter">Messsage</h1>
         <hr></hr>
         <br></br>
-        <h1>Respond to someone's offer in your feed by direct messaging them in Messages to work out the details.</h1>
+        <h1>Want to respond to someone's offer in your feed? Click Message on their post or use to the navigation bar to go
+           to Messages and direct messaging them to work out the details.</h1>
       </section>
 
       <section className="Home-section">
