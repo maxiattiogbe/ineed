@@ -10,9 +10,9 @@ import "./SingleMessage.css";
  */
 const SingleMessage = (props) => {
   return (
-    <div className={"u-flex u-flex-alignCenter SingleMessage-container"}>
-      <span className=" SingleMessage-sender u-bold">{props.message.sender.name + ":"}</span>
-      <span className="SingleMessage-content">{props.message.content}</span>
+    <div className="SingleMessage-container">
+      <span className="SingleMessage-sender">{props.message.sender.name + ":"}</span>
+      <span>{props.message.content}</span>
     </div>
   );
 }

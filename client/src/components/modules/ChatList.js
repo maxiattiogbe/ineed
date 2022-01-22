@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SingleUser from "./SingleUser.js";
 
 import "./SingleUser.css";
+import "./ChatList.css";
 
 /**
  * List of users that are online to chat with and all chat
@@ -15,7 +16,7 @@ import "./SingleUser.css";
  const ChatList = (props) => {
   return (
     <>
-      <h3>Open Chats</h3>
+      <h3 className="ChatListTitle">Open Chats</h3>
       {props.users
         .map((user, i) => (
           <SingleUser
