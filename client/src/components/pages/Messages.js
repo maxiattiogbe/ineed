@@ -145,7 +145,7 @@ const Messages = (props) => {
   };
 
   useEffect(() => {
-    document.title = "Chatbook";
+    document.title = "ineed";
   }, []);
 
   useEffect(() => {
