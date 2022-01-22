@@ -19,68 +19,65 @@ import "../utilities.css";
 import "./App.css";
 
 /**
- * Define the "App" component as a class.
+ * Define the "App" component as a function.
  */
-class App extends Component {
-  // makes props available in this component
-  constructor(props) {
-    super(props);
-    this.state = {
-      userId: undefined,
-      userName: undefined,
-    };
-  }
+const App = () => {
+  const [userId, setUserId] = useState(null);
+  const [userName, setUserName] = useState(null);
 
-  componentDidMount() {
+  useEffect(() => {
     get("/api/whoami").then((user) => {
       if (user._id) {
         // they are registed in the database, and currently logged in.
-        this.setState({ userId: user._id });
-        this.setUserName({userName: user.name});
+        setUserId(user._id);
+        setUserName(user.name);
       }
     });
-  }
+  }, []);
 
-  handleLogin = (res) => {
-    console.log(`Logged in as ${res.profileObj.name}`);
+  // TODO (extra!): Catch the "forceDisconnect" socket event.
+  // In the callback function, set the state 'socketDisconnected' to true.
+
+  const handleLogin = (res) => {
     const userToken = res.tokenObj.id_token;
     post("/api/login", { token: userToken }).then((user) => {
-      this.setState({ userId: user._id });
+      setUserId(user._id);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
 
-  handleLogout = () => {
-    this.setState({ userId: undefined });
+  const handleLogout = () => {
+    console.log("Logged out successfully!");
+    setUserId(null);
     post("/api/logout");
   };
 
   // required method: whatever is returned defines what
   // shows up on screen
-  render() {
-    return (
-      <>
-      <NavBar handleLogin={this.handleLogin} handleLogout={this.handleLogout} userId={this.state.userId}/>
+  return (
+    // <> is like a <div>, but won't show
+    // up in the DOM tree
+    <>
+      <NavBar handleLogin={handleLogin} handleLogout={handleLogout} userId={userId}/>
       <Router>
         <Home path="/" />
-        <Login path="/login" handleLogin={this.handleLogin} handleLogout={this.handleLogout} userId={this.state.userId} />
-        {this.state.userId && (
-          <Profile path="/profile" name={this.state.userName} userId={this.state.userId}/>
+        <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+        {userId && (
+          <Profile path="/profile" name={userName} userId={userId}/>
         )}
-        {this.state.userId && (
+        {userId && (
           <Feed path="/feed" />
         )}
-        {this.state.userId&& (
-          <NewPost path="/new-post" name={this.state.userName} userId={this.state.userId}/>
+        {userId&& (
+          <NewPost path="/new-post" name={userName} userId={userId}/>
         )}
-        {this.state.userId && (
-          <Messages path="/messages" userId={this.state.userId}/>
+        {userId && (
+          <Messages path="/messages" userId={userId}/>
         )}
         <NotFound default />
       </Router>
     </>
-    );
-  }
-}
+  );
+};
 
 export default App;

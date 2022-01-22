@@ -93,7 +93,7 @@ const Home = () => {
           <img src="../../../send.png" className="Home-img2"/>
       </section>
       <section className="Home-section2 u-inlineBlock">
-          <h1 className="Home-body-title-4">2. Claim</h1>
+          <h1 className="Home-body-title-4">2. Message</h1>
           <hr></hr>
           <img src="../../../tick-mark.png" className="Home-img2"/>
       </section>
@@ -130,10 +130,10 @@ const Home = () => {
       </section>
 
       <section className="Home-section">
-        <h1 className="Home-body-title-1 u-textCenter">Claim</h1>
+        <h1 className="Home-body-title-1 u-textCenter">Messsage</h1>
         <hr></hr>
         <br></br>
-        <h1>Claim someone's offer in your feed and then direct message them in Messages to work out the details.</h1>
+        <h1>Respond to someone's offer in your feed by direct messaging them in Messages to work out the details.</h1>
       </section>
 
       <section className="Home-section">
