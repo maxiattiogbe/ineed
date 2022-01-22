@@ -1,12 +1,11 @@
 .Messages-container {
-  height: calc(100vh - 120px);
+  display: flex;
 }
 
 .Messages-userList {
-  width: 260px;
-  margin-right: var(--l);
+  width: 50%;
 }
 
 .Messages-chatContainer {
-  flex-grow: 1;
+
 }

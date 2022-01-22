@@ -210,17 +210,17 @@ const Messages = (props) => {
   }
   return (
     <>
-      <div className="u-flex u-relative Chatbook-container">
-        <div className="Chatbook-userList">
+      <div className="Messages-container">
+        <div className="Messages-userList">
           <ChatList
             setActiveUser={setActiveUser}
             userId={props.userId}
             users={activeUsers}
             active={activeChat.recipient}
-          />
+            />
         </div>
-        <div className="Chatbook-chatContainer u-relative">
-          <Chat data={activeChat} />
+        <div>
+          <Chat data={activeChat}/>
         </div>
       </div>
     </>
