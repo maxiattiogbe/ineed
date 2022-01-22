@@ -13,7 +13,10 @@ const NewPost = (props) => {
     let datetime = todayDate + " @ " + currentdate;
     return (
         <div className="OuterClass">
-        <div className="body-title-2 u-textCenter NewPost">New Post</div>
+        <div className="body-title-1 u-textCenter NewPost">
+            New Post
+            <hr></hr>
+        </div>
         <div className="MiddleClass">
         <label className="LabelClass">
             <div className="InsideClass INeedTextClass">I need: (*Required)</div>

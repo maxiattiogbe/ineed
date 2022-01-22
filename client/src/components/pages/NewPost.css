@@ -23,7 +23,7 @@
 }
 
 .INeedTextClass {
-  color: orange;
+  color: var(--primary);
 }
 
 .INeedClass {
