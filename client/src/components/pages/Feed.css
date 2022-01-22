@@ -21,7 +21,7 @@
 }
 
 .ineed {
-  color: orange;
+  color: var(--primary);
 }
 .ioffer {
   color: var(--secondary);
@@ -32,7 +32,7 @@
 }
 
 .postInfoNeed {
-  border: 2px solid orange;
+  border: 2px solid var(--primary);
   color: gray;
   padding-left: 5px;
   font-size: 20px;
