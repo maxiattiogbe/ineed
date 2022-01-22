@@ -128,7 +128,7 @@ const Messages = (props) => {
    * @property {UserObject} recipient
    */
 
-  const [activeUsers, setActiveUsers] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
 
   const [activeChat, setActiveChat] = useState({
     recipient: ALL_CHAT,
@@ -153,7 +153,7 @@ const Messages = (props) => {
   }, [activeChat.recipient._id]);
 
   useEffect(() => {
-    get("/api/activeUsers").then((data) => {
+    get("/api/allUsers").then((allUsersList) => {
       // If user is logged in, we load their chats. If they are not logged in,
       // there's nothing to load. (Also prevents data races with socket event)
 
@@ -162,7 +162,7 @@ const Messages = (props) => {
       */
 
       if (props.userId) {
-        setActiveUsers([ALL_CHAT].concat(data.activeUsers));
+        setAllUsers([ALL_CHAT].concat(allUsersList));
       };
     });
   }, []);
@@ -190,7 +190,9 @@ const Messages = (props) => {
 
   useEffect(() => {
     const callback = (data) => {
+      /*
       setActiveUsers([ALL_CHAT].concat(data.activeUsers));
+      */
     };
     socket.on("activeUsers", callback);
     return () => {
@@ -217,7 +219,7 @@ const Messages = (props) => {
           <ChatList
             setActiveUser={setActiveUser}
             userId={props.userId}
-            users={activeUsers}
+            users={allUsers}
             active={activeChat.recipient}
             />
         </div>

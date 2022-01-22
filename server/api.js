@@ -216,8 +216,37 @@ router.post("/message", auth.ensureLoggedIn, (req, res) => {
   if (req.body.recipient._id == "ALL_CHAT") {
     socketManager.getIo().emit("message", message);
   } else {
-    socketManager.getSocketFromUserID(req.body.recipient._id).emit("message", message);
-    if(req.user._id !== req.body.recipient._id) socketManager.getSocketFromUserID(req.user._id).emit("message", message);
+    /*
+    console.log(req.user._id + " " + req.body.recipient._id);
+
+    console.log(socketManager.getSocketFromUserID(req.body.recipient._id));
+
+    console.log("Time 1")
+
+    console.log(socketManager.getSocketFromUserID(req.body.recipient._id).emit("message", message));
+
+    console.log("Time 2");
+    */
+
+    const socketOfUserID = socketManager.getSocketFromUserID(req.body.recipient._id);
+
+    if (socketOfUserID)
+    {
+      socketOfUserID.emit("message", message);
+    }
+    
+    /*
+    console.log(req.user._id !== req.body.recipient._id);
+    */
+
+    if(req.user._id !== req.body.recipient._id)
+    {
+      /*
+      console.log("Got here");
+      */
+
+      socketManager.getSocketFromUserID(req.user._id).emit("message", message);
+    }
   }
 });
 
@@ -227,6 +256,15 @@ router.get("/activeUsers", (req, res) => {
   */
 
   res.send({ activeUsers: socketManager.getAllConnectedUsers() });
+});
+
+router.get("/allUsers", (req, res) => {
+  User.find({}).then(
+    (users) =>
+    {
+      res.send(users);
+    }
+  );
 });
 
 // anything else falls to this "not found" case
