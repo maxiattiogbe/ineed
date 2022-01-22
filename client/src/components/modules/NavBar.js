@@ -47,9 +47,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
                 onLogoutSuccess={handleLogout}
                 onFailure={
                   (err) => {
-                    /*
-                    console.log(err);
-                    */
+
                   }
                 }
                 />
@@ -61,9 +59,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
               onSuccess={handleLogin}
               onFailure={
                 (err) => {
-                  /*
-                  console.log(err);
-                  */
+                  
                 }
               }
               />

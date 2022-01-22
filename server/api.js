@@ -59,11 +59,6 @@ router.get("/receiveUserPosts", (req, res) => {
 });
 
 router.get("/receivePerson", (req, res) => {
-  /*
-  console.log(req.query.name);
-  console.log(typeof(req.query.name));
-  */
-
   Post.find({name: new RegExp(req.query.name, "i")}).then(
     (posts) => {
       res.send(posts);
@@ -88,10 +83,6 @@ router.get("/receiveOffer", (req, res) => {
 });
 
 router.post("/addNewPost", (req, res) => {
-  /*
-  console.log(req.user);
-  */
-
   const newPost = new Post({
     userId: req.body.userId,
     name: req.body.name,
@@ -106,17 +97,9 @@ router.post("/addNewPost", (req, res) => {
 });
 
 router.post("/deletePost", (req, res) => {
-  /*
-  console.log("Hello there");
-  console.log(req.body.postId);
-  console.log(typeof(req.body.postId));
-  */
-
   Post.deleteOne({_id: req.body.postId}).then(
     () => {
-      /*
-      console.log("Done");
-      */
+
     }
   );
 });
@@ -193,15 +176,6 @@ router.get("/chat", (req, res) => {
 });
 
 router.post("/message", auth.ensureLoggedIn, (req, res) => {
-  /*
-  console.log("There is");
-  console.log(req.body.recipient.name);
-  */
-
-  /*
-  console.log(`Received a chat message from ${req.user.name}: ${req.body.content}`);
-  */
-
   // insert this message into the database
   const message = new Message({
     recipient: req.body.recipient,
@@ -216,45 +190,21 @@ router.post("/message", auth.ensureLoggedIn, (req, res) => {
   if (req.body.recipient._id == "ALL_CHAT") {
     socketManager.getIo().emit("message", message);
   } else {
-    /*
-    console.log(req.user._id + " " + req.body.recipient._id);
-
-    console.log(socketManager.getSocketFromUserID(req.body.recipient._id));
-
-    console.log("Time 1")
-
-    console.log(socketManager.getSocketFromUserID(req.body.recipient._id).emit("message", message));
-
-    console.log("Time 2");
-    */
-
     const socketOfUserID = socketManager.getSocketFromUserID(req.body.recipient._id);
 
     if (socketOfUserID)
     {
       socketOfUserID.emit("message", message);
     }
-    
-    /*
-    console.log(req.user._id !== req.body.recipient._id);
-    */
 
     if(req.user._id !== req.body.recipient._id)
     {
-      /*
-      console.log("Got here");
-      */
-
       socketManager.getSocketFromUserID(req.user._id).emit("message", message);
     }
   }
 });
 
 router.get("/activeUsers", (req, res) => {
-  /*
-  console.log("We're here");
-  */
-
   res.send({ activeUsers: socketManager.getAllConnectedUsers() });
 });
 
@@ -269,10 +219,6 @@ router.get("/allUsers", (req, res) => {
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
-  /*
-  console.log(`API route not found: ${req.method} ${req.url}`);
-  */
-  
   res.status(404).send({ msg: "API route not found" });
 });
 

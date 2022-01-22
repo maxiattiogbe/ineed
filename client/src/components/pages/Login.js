@@ -22,7 +22,9 @@ const Login = ({ userId, handleLogin, handleLogout }) => {
               onLogoutSuccess={handleLogout}
               onFailure={
                 (err) => {
+                  /*
                   console.log(err);
+                  */
                 }
               }
               />
@@ -34,7 +36,9 @@ const Login = ({ userId, handleLogin, handleLogout }) => {
             onSuccess={handleLogin}
             onFailure={
               (err) => {
+                /*
                 console.log(err);
+                */
               }
             }
             />

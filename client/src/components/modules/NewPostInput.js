@@ -71,16 +71,7 @@ const NewComment = (props) => {
  */
 const NewMessage = (props) => {
   const sendMessage = (value) => {
-    /*
-    console.log("Hello everyone.");
-    console.log(props.recipient);
-    */
-
     const body = { recipient: props.recipient, content: value };
-
-    /*
-    console.log(body);
-    */
 
     post("/api/message", body);
   };

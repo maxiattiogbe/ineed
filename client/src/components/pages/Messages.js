@@ -156,11 +156,7 @@ const Messages = (props) => {
     get("/api/allUsers").then((allUsersList) => {
       // If user is logged in, we load their chats. If they are not logged in,
       // there's nothing to load. (Also prevents data races with socket event)
-
-      /*
-      console.log("We got here");
-      */
-
+      
       if (props.userId) {
         setAllUsers([ALL_CHAT].concat(allUsersList));
       };

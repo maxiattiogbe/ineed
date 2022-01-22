@@ -15,10 +15,6 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
     const innerOffer = useRef();
     const innerOther = useRef();
 
-    /*
-    console.log(id);
-    */
-
     useEffect(
         () =>
         {
@@ -116,11 +112,6 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
                 class = "btn btn-outline-success"
                 onClick = {
                     () => {
-                        /*
-                        console.log("Here");
-                        console.log(id);
-                        */
-                       
                         setVisible(false);
                         post("/api/deletePost", {postId: id});
                     }
