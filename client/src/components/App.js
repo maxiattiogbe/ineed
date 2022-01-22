@@ -27,6 +27,8 @@ const App = () => {
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
+      console.log("We're here");
+
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
@@ -42,6 +44,7 @@ const App = () => {
     const userToken = res.tokenObj.id_token;
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
+      setUserName(user.name);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
@@ -49,6 +52,7 @@ const App = () => {
   const handleLogout = () => {
     console.log("Logged out successfully!");
     setUserId(null);
+    setUserName(null);
     post("/api/logout");
   };
 
