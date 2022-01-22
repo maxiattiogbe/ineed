@@ -22,15 +22,7 @@ const NewPostInput = (props) => {
   // called when the user hits "Submit" for a new post
   const handleSubmit = (event) => {
     props.onSubmit(value);
-    
-    /*
-    event.preventDefault();
-    */
-    
-    /*
-    props.onSubmit && props.onSubmit(value);
     setValue("");
-    */
   };
 
   return (
