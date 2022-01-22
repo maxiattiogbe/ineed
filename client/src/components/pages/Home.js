@@ -133,9 +133,18 @@ const Home = () => {
         <h1 className="Home-body-title-1 u-textCenter">Message</h1>
         <hr></hr>
         <br></br>
-        <h1>Want to respond to someone's offer in your feed? Click Message on their post or use to the navigation bar to go
-           to Messages and direct messaging them to work out the details.</h1>
-           <br></br>
+        <h1>Want to respond to someone's offer in your feed?</h1>
+        <br></br>
+        <h1>
+          Leave a comment to reply publicly or share when you can direct message them live in Messages, which requires both of you
+          to be logged in. Get to Messages by clicking Message on their post or using the navigation bar.
+        </h1>
+        <br></br>
+        <h1>
+          Messages also features All Chat, a group chat of all active (logged in) users, where you can meet and chat live with other
+          users who may end up accepting your future offers!
+        </h1>
+        <br></br>
         <div className="u-textCenter">
           <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
         </div>
@@ -145,7 +154,7 @@ const Home = () => {
         <h1 className="Home-body-title-1 u-textCenter">Meet</h1>
         <hr></hr>
         <br></br>
-        <h1>Meet up to get what you need! If you're lucky, you might also get a new friend as a bonus.</h1>
+        <h1>Meet up to get what you need! If you're lucky, you might even get a new friend as a bonus.</h1>
         <br></br>
         <div className="u-textCenter">
           <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif" className="Home-img2"/>
