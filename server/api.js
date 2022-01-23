@@ -75,7 +75,7 @@ router.get("/receiveNeed", (req, res) => {
 });
 
 router.get("/receiveOffer", (req, res) => {
-  Post.find({iOffer: req.query.iOffer}).then(
+  Post.find({iOffer: new RegExp(req.query.iOffer, "i")}).then(
     (posts) => {
       res.send(posts);
     }
