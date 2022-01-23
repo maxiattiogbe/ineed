@@ -49,7 +49,7 @@ const Login = ({ userId, handleLogin, handleLogout, name}) => {
             {userId && (<div className="body-text-1">Welcome {name}!</div>)}
             {userId && (<br></br>)}
             {userId && (<br></br>)}
-            {userId && (<div className="body-text-1">Checkout the Home page if it's your first time here or you just need a
+            {userId && (<div className="body-text-1">Check out the Home page if it's your first time here or you just need a
              refresher on how to use Ineed.</div>)}
              {userId && (<div className="body-text-1">Otherwise, head straight to New Post to make a post and get what you need!</div>)}
              {userId && (<div className="body-text-1">Don't forget to check for anything new in Feed and Messages.</div>)}
