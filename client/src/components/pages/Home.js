@@ -178,7 +178,7 @@ const Home = ({userId}) => {
           </h1>
           <br></br>
           <div className="u-textCenter">
-            <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
+            <img src="../../../blue_boy_typing_nothought.gif" className="Home-img2"/>
           </div>
         </section> 
       )}
@@ -191,7 +191,7 @@ const Home = ({userId}) => {
           <h1>After working out any details in Messages, meet up to seal the deal and get what you need! If you're lucky, you might even get a new friend as a bonus.</h1>
           <br></br>
           <div className="u-textCenter">
-            <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif" className="Home-img2"/>
+            <img src="../../../handshake.gif" className="Home-img2"/>
           </div>
           <br></br>
           <h1  className="u-textCenter">Now it's time to get started and make a <Link to={`/new-post/`} className="Home-body-link2">

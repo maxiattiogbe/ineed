@@ -48,8 +48,6 @@
 }
 
 .Home-img {
-  /* background-image: url(https://images.pexels.com/photos/6146951/pexels-photo-6146951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); */
-  background-image: url(../../../dist/friends.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -58,7 +56,6 @@
   width: 50%;
 }
 
-/* Modified from https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/ */
 .Home-overlay {
   background-color: rgba(213, 127, 57, 0.3);
 }
