@@ -28,31 +28,41 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
         <>
         { visible &&
         <div className="boxed">
-        <img className = "profilepic" src = {picture} alt = "profile pic"></img>
-        <div className = "name">{name}</div> 
-        <br></br>
-        <div className = "ineed">I need</div>
-        <div className = "postInfoNeed">{thisNeed}</div>
-        <br></br>
-        <div className = "ioffer">I offer</div>
-        <div className = "postInfoOffer">{thisOffer}</div>
-        <br></br>
-        <div className = "other" >Other</div>
-        <div className = "postInfoOther">{thisOther}</div>
-        <br></br>
-        <div class = "time">{datetime}</div>
-        <br></br>
+        <div className = "needBox">
+            <div className = "ineed">I need</div>
+            <div className = "postInfoNeed">{thisNeed}</div>
+        </div>
+        <div className = "offerBox">
+            <div className = "ioffer">I offer</div>
+            <div className = "postInfoOffer">{thisOffer}</div>
+        </div>
+        <div className = "otherBox">
+            <div className = "other">Other</div>
+            <div className = "postInfoOther">{thisOther}</div>
+        </div>
+        <div className = "name">
+            <img className = "profilePicturePost" src = {picture}></img>
+            <div className = "nameText">
+                &nbsp;{name}&nbsp;
+            </div>
+            <div className = "dateTimeText">
+                {datetime}
+            </div>
+        </div>
         {
             page !== "profile" &&
-            <Link to={"/messages"} className="NavBar-link" >
-                <button class="btn btn-outline-success">Message</button>
+            <Link to={"/messages"} className="NavBar-link">
+                <div className = "messageButton">
+                    Message→
+                </div>
             </Link>
         }
+        <div className = "editAndDeleteWrapper">
         {
             page === "profile" &&
             <>
-            <button
-                class="btn btn-outline-success"
+            <div
+                className = "editPostButton"
                 onClick = {
                     () => {
                         setOpen(true);
@@ -60,7 +70,7 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
                 }
                 >
                 Edit
-            </button>
+            </div>
             <Modal isOpen={open}>
                 <div>Edit post</div>
                 <div>I need</div>
@@ -108,8 +118,7 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
         }
         {
             page === "profile" &&
-            <button
-                class = "btn btn-outline-success"
+            <div className = "deletePostButton"
                 onClick = {
                     () => {
                         setVisible(false);
@@ -117,9 +126,10 @@ const Post = ({id, picture, name, ineed, offer, other, datetime, page}) => {
                     }
                 }
                 >
-                Delete
-            </button>
+                &nbsp;Delete
+            </div>
         }
+        </div>
         </div>
         }
         </>

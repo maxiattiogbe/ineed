@@ -1,10 +1,15 @@
 .boxed {
+  border: 1px solid gray;
   border-radius: var(--xl);
-  padding: 3.125%;
-  background-color: rgb(224, 220, 212);
-  /* font-size: 1.2vw; */
-  font-size: 1.2vw;
+  margin: 1%;
+  padding: 1%;
 }
+
+.profilePicturePost {
+  border-radius: 50%;
+  height: 1em;
+}
+
 .profilepic {
   border-radius: 50%;
   width: 50px;
@@ -12,42 +17,51 @@
 }
 
 .name {
-  color: black;
-  font-weight: bold;
-  /* font-size: 1.5vw; */
-  font-size: 1.5vw;
+  display: flex;
+  font-size: x-large;
+}
+
+.nameText {
+  line-height: 1em;
+}
+
+.dateTimeText {
+  color: gray;
+  line-height: 1em;
 }
 
 .ineed {
-  color: var(--primary);
+  width: 20%;
 }
+
 .ioffer {
-  color: var(--secondary);
+  width: 20%;
 }
 
 .other {
-  color: black;
+  width: 20%;
 }
 
 .postInfoNeed {
-  border: 2px solid var(--primary);
-  color: gray;
-  padding-left: 5px;
-  font-size: 20px;
+  
+}
+
+.needBox {
+  display: flex;
+  font-size: xx-large;
 }
 
 .postInfoOffer {
-  border: 2px solid var(--secondary);
-  color: gray;
-  padding-left: 5px;
-  font-size: 20px;
+
+}
+
+.offerBox {
+  display: flex;
+  font-size: xx-large;
 }
 
 .postInfoOther {
-  border: 2px solid gray;
-  color: gray;
-  padding-left: 5px;
-  font-size: 20px;
+
 }
 
 .time {
@@ -55,9 +69,7 @@
 }
 
 .posts {
-  flex: 3;
-  border: 1px solid gray;
-  width: 100vw;
+  width: 100%;
 }
 
 .search {
@@ -65,4 +77,33 @@
   top: 90px;
   z-index: 20;
   background-color: white;
+}
+
+.pictureAndName {
+  display: flex;
+  width: 10%;
+}
+
+.otherBox {
+  display: flex;
+  font-size: xx-large;
+}
+
+.messageButton {
+  font-size: x-large;
+  line-height: 1em;
+  color: blue;
+}
+
+.editPostButton {
+  color: blue;
+}
+
+.deletePostButton {
+  color: blue;
+}
+
+.editAndDeleteWrapper {
+  display: flex;
+  font-size: x-large;
 }
