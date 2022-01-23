@@ -144,6 +144,10 @@ const Home = () => {
           like when and where to meet someone. 
         </h1>
         <br></br>
+        <h1>
+          Messages also features All Chat, a groupchat of all Ineed users, where you can get to know the people who may accept your future offers.
+        </h1>
+        <br></br>
         <div className="u-textCenter">
           <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
         </div>
