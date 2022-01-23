@@ -110,19 +110,19 @@ const Home = ({userId}) => {
 
           <section className="Home-section4 u-inlineBlock">
               <h1 className="Home-body-title-4">1. Post</h1>
-              <hr></hr>
+             
               <img src="../../../send.png" className="Home-img2"/>
           </section>
   
           <section className="Home-section2 u-inlineBlock">
               <h1 className="Home-body-title-4">2. Message</h1>
-              <hr></hr>
+             
               <img src="../../../chat.png" className="Home-img2"/>
           </section>
   
           <section className="Home-section3 u-inlineBlock">
               <h1 className="Home-body-title-4">3. Meet</h1>
-              <hr></hr>
+             
               <img src="../../../deal.png" className="Home-img2"/>
           </section>
   
@@ -133,7 +133,7 @@ const Home = ({userId}) => {
       {userId && (
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Post</h1>
-          <hr></hr>
+         
           <br></br>
           <h1>Go to New Post and simply post whatever you need ... </h1>
           <br></br>
@@ -160,7 +160,7 @@ const Home = ({userId}) => {
       {userId && (
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Message</h1>
-          <hr></hr>
+         
           <br></br>
           <h1>Want to respond to someone's offer in your feed?</h1>
           <br></br>
@@ -186,7 +186,7 @@ const Home = ({userId}) => {
       {userId && (
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Meet</h1>
-          <hr></hr>
+         
           <br></br>
           <h1>After working out any details in Messages, meet up to seal the deal and get what you need! If you're lucky, you might even get a new friend as a bonus.</h1>
           <br></br>
