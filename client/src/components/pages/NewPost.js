@@ -13,10 +13,7 @@ const NewPost = (props) => {
     let datetime = todayDate + " @ " + currentdate;
     return (
         <div className="OuterClass">
-        <div className="body-title-1 u-textCenter NewPost">
-            New Post
-            <hr></hr>
-        </div>
+        <br></br>
         <div className="MiddleClass">
         <label className="LabelClass">
             <div className="InsideClass INeedTextClass">I need: (*Required)</div>
@@ -28,7 +25,7 @@ const NewPost = (props) => {
         </label>
         <label className="LabelClass">
             <div className="InsideClass">Other:</div>
-            <textarea placeholder="enter other essiential info (time,place)" type="text" className="InsideClass OtherClass textbackground" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
+            <textarea placeholder="enter other essential info (time, place)" type="text" className="InsideClass OtherClass textbackground" value={currentOther} onChange={event => setCurrentOther(event.target.value)} />
         </label>
         <button type="button" className="btn btn-warning" value="Submit" onClick={
             () => 

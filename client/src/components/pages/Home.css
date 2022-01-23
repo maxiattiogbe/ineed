@@ -48,6 +48,7 @@
 }
 
 .Home-img {
+  background-image: url(../../../dist/friends.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
