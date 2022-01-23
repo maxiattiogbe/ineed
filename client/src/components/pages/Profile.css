@@ -2,66 +2,96 @@
   display: flex;
 }
 
-.flex-child {
-  flex: 1;
-  border: 1px solid gray;
+.profileLeftContainer {
+  margin: 1.5625%;
+  width: 25%;
 }
 
-.flex-child--featured {
-  flex: 3;
-  border: 1px solid gray;
+.profilePicInProfile
+{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
 }
 
-.profilestart {
-  color: orange;
+.profileName {
+  font-size: xx-large;
+  font-weight: bold;
 }
 
-.profileinfo {
-  color: gray;
+.profileAbout {
+  font-size: large;
 }
 
-.profileinfotext {
-  color: black;
+.innerAboutText {
+  font-weight: bold;
+  font-size: large;
+  width: 25%;
 }
 
-.AboutTextArea {
-  width: 20%;
+.aboutTextArea {
+  width: 25%;
+}
+
+.innerCollegeContainer {
+  width: 25%;
+  display: flex;
+}
+
+.innerCollegeText {
+  font-weight: bold;
+  width: 25%;
+}
+
+.collegeInput {
+  width: 75%;
 }
 
 .editButton {
-  color: black;
-  background-color: orange;
-  width: 20%;
+  background-color: gray;
   text-align: center;
+  font-weight: bold;
+  border-radius: 100000000000000000px;
+}
+
+.buttonsContainer {
+  display: flex;
+  width: 25%;
 }
 
 .saveButton {
-  color: black;
-  background-color: orange;
-  width: 10%;
+  background-color: green;
   text-align: center;
+  font-weight: bold;
+  width: 25%;
+  border-radius: 100000000000000000px;
 }
 
 .cancelButton {
-  color: black;
   background-color: gray;
-  width: 10%;
   text-align: center;
+  font-weight: bold;
+  width: 25%;
+  border-radius: 100000000000000000px;
+  /*
+  margin: 1%;
+  */
 }
 
-.boxedprofile {
-  color: orange;
-  width: 90%;
-  float: right;
-  padding: 20px;
+.outerCollegeContainer {
+  display: flex;
 }
 
-.profilename {
-  color: black;
+.outerCollegeText {
+  width: 25%;
+  font-weight: bold;
 }
 
 .ineedtitle {
-  color: gray;
   font-size: xx-large;
-  text-align: center;
+}
+
+.profileRightContainer {
+  margin: 1.5625%;
+  flex-grow: 1;
 }

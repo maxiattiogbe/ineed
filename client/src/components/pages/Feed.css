@@ -1,8 +1,6 @@
 .boxed {
-  border: 1px solid grey;
   border-radius: var(--xl);
-  padding: 100px 100px 100px 100px;
-  margin: 2vw 10vw;
+  padding: 3.125%;
   background-color: rgb(224, 220, 212);
   /* font-size: 1.2vw; */
   font-size: 1.2vw;

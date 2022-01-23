@@ -48,73 +48,71 @@ const Profile = (props) => {
 
   return (
     <>
-    <div className="body-title-1 u-textCenter">Profile</div>
     <div className = "flex-container">
-    <div className= "flex-child">
-    <div className="aboutprofile">
-    <div className="boxedprofile">
-      <div className="profilestart">About</div>
-      <div className="profileinfo">College</div>
-      <div className="profileinfotext">{outerCollegeText}</div>
-      <div className="profileinfo">About</div>
-      <div className="profileinfotext">{outerAbout}</div>
-      <div
-        className = "editButton"
-        onClick = {
-          () => {
-            setOpen(!open);
-          }
-        }>
-        Edit
-      </div>
-      <Modal isOpen={open}>
-        <div>Edit My Profile</div>
-        <div>College</div>
-        <input className="CollegeInput" ref={innerCollege} defaultValue={outerCollegeText}></input>
-        <div>About</div>
-        <textarea className="AboutTextArea" ref={innerAbout}>{outerAbout}</textarea>
+      <div className = "profileLeftContainer">
+        <img className = "profilePicInProfile" src = {props.picture} alt = "profile pic"></img>
+        <div className = "profileName">{props.name}</div>
+        <div className = "profileAbout">{outerAbout}</div>
         <div
-          className = "saveButton"
+          className = "editButton"
           onClick = {
             () => {
               setOpen(!open);
-              post("/api/updateOrStoreProfile",
-                {
-                  userId: props.userId,
-                  college: innerCollege.current.value,
-                  about: innerAbout.current.value
+            }
+          }>
+          Edit profile
+        </div>
+        <div className="outerCollegeContainer">
+          <div className="outerCollegeText">
+            College
+          </div>
+          {outerCollegeText}
+        </div>
+        <Modal isOpen={open}>
+          <div className="innerAboutText">About</div>
+          <textarea className="aboutTextArea" ref={innerAbout}>{outerAbout}</textarea>
+          <div className="innerCollegeContainer">
+            <div className="innerCollegeText">College</div>
+            <input className="collegeInput" ref={innerCollege} defaultValue={outerCollegeText}></input>
+          </div>
+          <div className="buttonsContainer">
+            <div
+              className = "saveButton"
+              onClick = {
+                () => {
+                  setOpen(!open);
+                  post("/api/updateOrStoreProfile",
+                    {
+                      userId: props.userId,
+                      college: innerCollege.current.value,
+                      about: innerAbout.current.value
+                    }
+                  );
+                  setOuterCollegeText(innerCollege.current.value);
+                  setOuterAbout(innerAbout.current.value);
                 }
-              );
-              setOuterCollegeText(innerCollege.current.value);
-              setOuterAbout(innerAbout.current.value);
-            }
-          }>
-          Save
+              }>
+              Save
+            </div>
+            <div
+              className = "cancelButton"
+              onClick = {
+                () => {
+                  setOpen(!open);
+                }
+              }>
+              Cancel
+            </div>
+          </div>
+        </Modal>
+      </div>
+    
+      <div className="profileRightContainer">
+        <div className = "ineedtitle">
+          My Posts
         </div>
-        <div
-          className = "cancelButton"
-          onClick = {
-            () => {
-              setOpen(!open);
-            }
-          }>
-          Cancel
-        </div>
-      </Modal>
-    </div>
-    </div>
-    </div>
-
-    <div className = "flex-child--featured">
-    <div className="boxedprofile">
-      <img className = "profilepic" src = {props.picture} alt = "profile pic"></img>
-      <div className = "profilename">{props.name}</div> 
-      <div className = "ineedtitle">My Posts</div>
-      <div className = "ineedposts">
         {reactPosts}
       </div>
-    </div>
-    </div>
     </div>
     </>
   );
