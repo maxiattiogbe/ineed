@@ -101,7 +101,7 @@ const Profile = (props) => {
                   setOpen(!open);
                 }
               }>
-              Cancel
+              &nbsp;Cancel
             </div>
           </div>
         </Modal>
