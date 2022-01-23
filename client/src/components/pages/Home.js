@@ -63,8 +63,8 @@ const Home = ({userId}) => {
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #292a2a }";
     document.body.appendChild(css);
-     }, [])
-    
+  });
+  
   return (
     <>
       <div className="Home-img">
