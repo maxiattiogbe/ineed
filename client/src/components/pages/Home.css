@@ -105,6 +105,46 @@
   color: var(--white);
 }
 
+.Home-body-link,
+.Home-body-link:visited {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 60px;
+}
+
+.Home-body-link:hover {
+  color: var(--primary--dim);
+}
+
+.Home-body-link + .Home-body-link {
+  margin-left: var(--m);
+}
+
+.Home-body-link:active {
+  color: var(--secondary--dim);
+}
+
+/**/
+
+.Home-body-link2,
+.Home-body-link2:visited {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.Home-body-link2:hover {
+  color: var(--primary--dim);
+}
+
+.Home-body-link2 + .Home-body-link2 {
+  margin-left: var(--m);
+}
+
+.Home-body-link2:active {
+  color: var(--secondary--dim);
+}
+
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid var(--primary--dim); /* The typwriter cursor */

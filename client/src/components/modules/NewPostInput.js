@@ -34,12 +34,11 @@ const NewPostInput = (props) => {
         onChange = {handleChange}
         >
       </textarea>
-      <div
-        className = "NewMessageSubmit"
-        onClick = {handleSubmit}
-        >
+
+      <div className = "NewMessageSubmit" onClick = {value.replace(/\s+/g, '') !== "" ? (handleSubmit) : (null)}>
         Submit
       </div>
+
     </>
   );
 };

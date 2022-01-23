@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { useEffect } from "react";
+import { Link } from "@reach/router";
 
 import "../../utilities.css";
 import "./Home.css";
 
 
-const Home = () => {
+const Home = ({userId}) => {
   // Modified from https://codepen.io/gschier/pen/jkivt
   let TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
@@ -75,97 +76,135 @@ const Home = () => {
           </div>
           <br></br>
           <br></br>
+          {!userId && (
+          <Link to={`/login/`} className="Home-body-link">
+            Join Our Community
+          </Link>
+        )}
+          <br></br>
           <br></br>
         </div>
       </div>
 
-     <section className="Home-section"> 
-        <h1 className="u-textCenter">Need something? We got you.</h1>
-        <br></br>
-        <h1 className="u-textCenter">Login to get what you need in three easy steps.</h1>
-        <br></br>
-     </section>
-
-     <section className="Home-section5 u-textCenter"> 
-      <section className="Home-section4 u-inlineBlock">
-          <h1 className="Home-body-title-4">1. Post</h1>
-          <hr></hr>
-          <img src="../../../send.png" className="Home-img2"/>
-      </section>
-      <section className="Home-section2 u-inlineBlock">
-          <h1 className="Home-body-title-4">2. Message</h1>
-          <hr></hr>
-          <img src="../../../chat.png" className="Home-img2"/>
-      </section>
-      <section className="Home-section3 u-inlineBlock">
-          <h1 className="Home-body-title-4">3. Meet</h1>
-          <hr></hr>
-          <img src="../../../deal.png" className="Home-img2"/>
-      </section>
-     </section>
-
-      <section className="Home-section">
-        <h1 className="Home-body-title-1 u-textCenter">Post</h1>
-        <hr></hr>
-        <br></br>
-        <h1>Go to New Post and simply post whatever you need ... </h1>
-        <br></br>
-        <h1 className="Home-body-title-2">I need
-          <span
-            class="txt-rotate"
-            data-period="100"
-            data-rotate='[ " a 10 ft phone charger cable. ", " someone good at drawing. ", " help on physics homework. "]'></span>
-        </h1>
-        <br></br>
-        <h1 className="u-flex-alignCenter">... along with anything you'll offer in return ...</h1>
+      {!userId && (
+          <section className="Home-section"> 
+          <h1 className="u-textCenter">Need something? We got you.</h1>
           <br></br>
-          <h1 className="Home-body-title-3">I offer
+          <h1 className="u-textCenter">Join our community now to get what you need in three easy steps.</h1>
+          <br></br>
+       </section>
+        )}
+
+      {userId && (
+          <section className="Home-section"> 
+            <h1 className="u-textCenter">Need something? We got you.</h1>
+            <br></br>
+            <h1 className="u-textCenter">Get what you need in three easy steps.</h1>
+            <br></br>
+          </section>
+          
+      )}
+
+      {userId && (
+          <section className="Home-section5 u-textCenter"> 
+
+          <section className="Home-section4 u-inlineBlock">
+              <h1 className="Home-body-title-4">1. Post</h1>
+              <hr></hr>
+              <img src="../../../send.png" className="Home-img2"/>
+          </section>
+  
+          <section className="Home-section2 u-inlineBlock">
+              <h1 className="Home-body-title-4">2. Message</h1>
+              <hr></hr>
+              <img src="../../../chat.png" className="Home-img2"/>
+          </section>
+  
+          <section className="Home-section3 u-inlineBlock">
+              <h1 className="Home-body-title-4">3. Meet</h1>
+              <hr></hr>
+              <img src="../../../deal.png" className="Home-img2"/>
+          </section>
+  
+       </section>
+          
+      )}
+
+      {userId && (
+          <section className="Home-section">
+          <h1 className="Home-body-title-1 u-textCenter">Post</h1>
+          <hr></hr>
+          <br></br>
+          <h1>Go to New Post and simply post whatever you need ... </h1>
+          <br></br>
+          <h1 className="Home-body-title-2">I need
             <span
               class="txt-rotate"
               data-period="100"
-              data-rotate='[ " $10 on Venmo. ", " two cups of boba :)  ", " free hugs <3  "]'></span>
-        </h1>
-        <br></br>
-        <h1 className="u-flex-alignCenter">... and possibly additional details like when and where people can meet you.</h1>
-      </section>
+              data-rotate='[ " a 10 ft phone charger cable. ", " someone good at drawing. ", " help on physics homework. "]'></span>
+          </h1>
+          <br></br>
+          <h1 className="u-flex-alignCenter">... along with anything you'll offer in return ...</h1>
+            <br></br>
+            <h1 className="Home-body-title-3">I offer
+              <span
+                class="txt-rotate"
+                data-period="100"
+                data-rotate='[ " $10 on Venmo. ", " two cups of boba :)  ", " free hugs <3  "]'></span>
+          </h1>
+          <br></br>
+          <h1 className="u-flex-alignCenter">... and possibly additional details like when and where people can meet you.</h1>
+        </section>
+      )}
 
-      <section className="Home-section">
-        <h1 className="Home-body-title-1 u-textCenter">Message</h1>
-        <hr></hr>
-        <br></br>
-        <h1>Want to respond to someone's offer in your feed?</h1>
-        <br></br>
-        <h1>
-          Let them know in Messages! 
-        </h1>
-        <br></br>
-        <h1>
-          Get to Messages by clicking Message on their post or Messages in the navigation bar. This is the perfect place to work out details
-          like when and where to meet someone. 
-        </h1>
-        <br></br>
-        <h1>
-          Messages also features All Chat, a groupchat of all Ineed users, where you can get to know the people who may accept your future offers.
-        </h1>
-        <br></br>
-        <div className="u-textCenter">
-          <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
-        </div>
-      </section>
+      {userId && (
+          <section className="Home-section">
+          <h1 className="Home-body-title-1 u-textCenter">Message</h1>
+          <hr></hr>
+          <br></br>
+          <h1>Want to respond to someone's offer in your feed?</h1>
+          <br></br>
+          <h1>
+            Let them know in Messages! 
+          </h1>
+          <br></br>
+          <h1>
+            Get to Messages by clicking Message on their post or Messages in the navigation bar. This is the perfect place to work out details
+            like when and where to meet someone. 
+          </h1>
+          <br></br>
+          <h1>
+            Messages also features All Chat, a groupchat of all Ineed users, where you can get to know the people who may accept your future offers.
+          </h1>
+          <br></br>
+          <div className="u-textCenter">
+            <img src="https://cdn.dribbble.com/users/1579322/screenshots/6587273/blue_boy_typing_nothought.gif" className="Home-img2"/>
+          </div>
+        </section> 
+      )}
 
-      <section className="Home-section">
-        <h1 className="Home-body-title-1 u-textCenter">Meet</h1>
-        <hr></hr>
-        <br></br>
-        <h1>After working out any details in Messages, meet up to seal the deal and get what you need! If you're lucky, you might even get a new friend as a bonus.</h1>
-        <br></br>
+      {userId && (
+          <section className="Home-section">
+          <h1 className="Home-body-title-1 u-textCenter">Meet</h1>
+          <hr></hr>
+          <br></br>
+          <h1>After working out any details in Messages, meet up to seal the deal and get what you need! If you're lucky, you might even get a new friend as a bonus.</h1>
+          <br></br>
+          <div className="u-textCenter">
+            <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif" className="Home-img2"/>
+          </div>
+          <br></br>
+          <h1  className="u-textCenter">Now it's time to get started and make a <Link to={`/new-post/`} className="Home-body-link2">
+            New Post
+          </Link>!</h1>
+        </section>
+      )}
+
+      {userId && (
         <div className="u-textCenter">
-          <img src="https://cdn.dribbble.com/users/516449/screenshots/2548208/media/9d5069031bf81ac3624112982d59acff.gif" className="Home-img2"/>
-        </div>
-      </section>
-      <div className="u-textCenter">
-        <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
-      </div>
+          <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
+        </div>    
+      )}
     </>
   );
 };

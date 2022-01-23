@@ -69,8 +69,8 @@ const App = () => {
     <>
       <NavBar handleLogin={handleLogin} handleLogout={handleLogout} userId={userId}/>
       <Router>
-        <Home path="/" />
-        <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
+        <Home path="/" userId={userId}/>
+        <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} name={userName} />
         {userId && (
           <Profile path="/profile" name={userName} userId={userId} picture={userPicture}/>
         )}

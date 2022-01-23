@@ -22,6 +22,11 @@ const SingleUser = (props) => {
       }}
     >
       {
+        props.user.name === "ALL CHAT"
+        &&
+        <img className = "profilepic" src="../../../people2.png" />
+      }
+      {
         props.user.name !== "ALL CHAT"
         &&
         <img className = "profilepic" src={props.user.picture} />

@@ -33,6 +33,11 @@ const Chat = (props) => {
       <h3>
         {"Chatting with "}
         {
+          props.data.recipient.name === "ALL CHAT"
+          &&
+          <img className="profilepic" src="../../../people2.png"/>
+        }
+        {
           props.data.recipient.name !== "ALL CHAT"
           &&
           <img className="profilepic" src={props.data.recipient.picture}/>

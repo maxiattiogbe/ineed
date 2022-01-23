@@ -14,7 +14,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
       <div className="NavBar-title-part2 u-inlineBlock">need</div>
       <div className="NavBar-linkContainer u-inlineBlock">
         
-        <Link to="/" className="NavBar-link">
+        <Link to={`/`} className="NavBar-link">
           Home
         </Link>
         
@@ -52,17 +52,19 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
                 }
                 />
               </Link>
-          ) : (
-              <GoogleLogin
-              clientId={GOOGLE_CLIENT_ID}
-              buttonText="Login with Google"
-              onSuccess={handleLogin}
-              onFailure={
-                (err) => {
+          ) : ( null
+            // <Link to={`/`} className="NavBar-link" >
+            //   <GoogleLogin
+            //   clientId={GOOGLE_CLIENT_ID}
+            //   buttonText="Login with Google"
+            //   onSuccess={handleLogin}
+            //   onFailure={
+            //     (err) => {
                   
-                }
-              }
-              />
+            //     }
+            //   }
+            //   />
+            // </Link>
           )}
         </div>
         {!userId && (
