@@ -105,7 +105,7 @@ const Home = ({userId}) => {
           
       )}
 
-      {userId && (
+     
           <section className="Home-section5 u-textCenter"> 
 
           <section className="Home-section4 u-inlineBlock">
@@ -128,9 +128,9 @@ const Home = ({userId}) => {
   
        </section>
           
-      )}
+   
 
-      {userId && (
+      
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Post</h1>
          
@@ -155,9 +155,9 @@ const Home = ({userId}) => {
           <br></br>
           <h1 className="u-flex-alignCenter">... and possibly additional details like when and where people can meet you.</h1>
         </section>
-      )}
+     
 
-      {userId && (
+      
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Message</h1>
          
@@ -181,9 +181,9 @@ const Home = ({userId}) => {
             <img src="../../../blue_boy_typing_nothought.gif" className="Home-img2"/>
           </div>
         </section> 
-      )}
 
-      {userId && (
+
+    
           <section className="Home-section">
           <h1 className="Home-body-title-1 u-textCenter">Meet</h1>
          
@@ -194,17 +194,26 @@ const Home = ({userId}) => {
             <img src="../../../handshake.gif" className="Home-img2"/>
           </div>
           <br></br>
-          <h1  className="u-textCenter">Now it's time to get started and make a <Link to={`/new-post/`} className="Home-body-link2">
+          {!userId && (
+            <h1  className="u-textCenter"><Link to={`/login/`} className="Home-body-link2">
+            Login
+          </Link> to get started!
+          </h1>
+          )}
+          {userId && (
+            <h1  className="u-textCenter">Now it's time to make a <Link to={`/new-post/`} className="Home-body-link2">
             New Post
-          </Link>!</h1>
+          </Link>!
+          </h1>
+          )}
         </section>
-      )}
+      
 
-      {userId && (
+      
         <div className="u-textCenter">
           <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
         </div>    
-      )}
+      
     </>
   );
 };

@@ -52,20 +52,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
                 }
                 />
               </Link>
-          ) : ( null
-            // <Link to={`/`} className="NavBar-link" >
-            //   <GoogleLogin
-            //   clientId={GOOGLE_CLIENT_ID}
-            //   buttonText="Login with Google"
-            //   onSuccess={handleLogin}
-            //   onFailure={
-            //     (err) => {
-                  
-            //     }
-            //   }
-            //   />
-            // </Link>
-          )}
+          ) : (null)}
         </div>
         {!userId && (
           <Link to={`/login/`} className="NavBar-link">

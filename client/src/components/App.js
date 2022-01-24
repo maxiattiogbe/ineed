@@ -24,6 +24,7 @@ import "./App.css";
 const App = () => {
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
+  const [userFirstName, setUserFirstName] = useState(null);
   const [userPicture, setUserPicture] = useState(null);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = () => {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
         setUserName(user.name);
+        setUserFirstName(user.name.split(' ')[0]);
         setUserPicture(user.picture);
       }
     });
@@ -45,6 +47,7 @@ const App = () => {
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
       setUserName(user.name);
+      setUserFirstName(user.name.split(' ')[0]);
       setUserPicture(user.picture);
       post("/api/initsocket", { socketid: socket.id });
     });
@@ -57,6 +60,7 @@ const App = () => {
     
     setUserId(null);
     setUserName(null);
+    setUserFirstName(null);
     setUserPicture(null);
     post("/api/logout");
   };
@@ -70,7 +74,7 @@ const App = () => {
       <NavBar handleLogin={handleLogin} handleLogout={handleLogout} userId={userId}/>
       <Router>
         <Home path="/" userId={userId}/>
-        <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} name={userName} />
+        <Login path="/login" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} name={userFirstName} />
         {userId && (
           <Profile path="/profile" name={userName} userId={userId} picture={userPicture}/>
         )}

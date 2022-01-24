@@ -14,22 +14,7 @@ const Login = ({ userId, handleLogin, handleLogout, name}) => {
         <br></br>
         <br></br>
         <div className="u-textCenter">
-            {userId ? (null
-            //   <Link to={`/`} className="NavBar-link" >
-            //       <GoogleLogout
-            //       clientId={GOOGLE_CLIENT_ID}
-            //       buttonText="Logout"
-            //       onLogoutSuccess={handleLogout}
-            //       onFailure={
-            //         (err) => {
-            //           /*
-            //           console.log(err);
-            //           */
-            //         }
-            //       }
-            //       />
-            // </Link>
-            ) : (
+            {userId ? (null) : (
                 <GoogleLogin
                 clientId={GOOGLE_CLIENT_ID}
                 buttonText="Login with Google"
