@@ -206,14 +206,7 @@ const Home = ({userId}) => {
           </Link>!
           </h1>
           )}
-        </section>
-      
-
-      
-        <div className="u-textCenter">
-          <a href="https://www.flaticon.com/free-icons/direct" title="direct icons">Direct icons created by Vitaly Gorbachev - Flaticon</a>
-        </div>    
-      
+        </section>   
     </>
   );
 };
