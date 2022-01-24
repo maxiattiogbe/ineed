@@ -1,0 +1,18 @@
+.Login-body-link,
+.Login-body-link:visited {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.Login-body-link:hover {
+  color: var(--primary--dim);
+}
+
+.Login-body-link + .Login-body-link {
+  margin-left: var(--m);
+}
+
+.Login-body-link:active {
+  color: var(--secondary--dim);
+}
