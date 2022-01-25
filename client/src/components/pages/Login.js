@@ -44,7 +44,7 @@ const Login = ({ userId, handleLogin, handleLogout, name}) => {
           </Link> to make a post and get what you need!</div>)}
              {userId && (<div className="body-text-1">Made a mistake? No worries! Go to <Link to={`/profile/`} className="Login-body-link">
             Profile
-          </Link> to edit or delete posts and refresh the page to ensure edits are saved.</div>)}
+          </Link> to edit or delete posts and refresh the page to ensure changes are saved.</div>)}
              {userId && (<div className="body-text-1">Don't forget to check <Link to={`/feed/`} className="Login-body-link">
             Feed
           </Link> for any new posts</div>)}
