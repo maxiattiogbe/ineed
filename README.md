@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple social media website that allows university students to easily exchange items with each other on campus.
+A simple social media website that allows university students to easily exchange items with each other to get what they need on campus.
 
 ## External Packages
 
